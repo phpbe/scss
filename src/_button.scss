@@ -2,8 +2,9 @@
 .be-btn {
   display: inline-block;
   font-size: 1rem;
+  line-height: 1.5rem;
   padding: .375rem .75rem;
-  border-radius: .25rem;
+  border-radius: 5%;
   color: $btn-color;
   background-color: $btn-background-color;
   border: 1px solid $btn-border-color;
@@ -38,13 +39,11 @@
 .be-btn-sm {
   font-size: 0.875rem !important;
   padding: .25rem .5rem !important;
-  border-radius: .2rem !important;
   min-width: 4rem;
 }
 
 .be-btn-lg {
   font-size: 1.25rem !important;
   padding: 0.5rem 1rem !important;
-  border-radius: .3rem !important;
   min-width: 6rem;
 }
