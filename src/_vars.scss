@@ -1,0 +1,85 @@
+$breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px
+) !default;
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        xxl: 1320px
+) !default;
+
+// 布局分栏数
+$grid-columns: 24 !default;
+
+
+// 按钮样式
+$btn-color: #fff !default;
+$btn-background-color: #333 !default;
+$btn-border-color: #333 !default;
+
+// 按钮悬停样式
+$btn-hover-color: #fff !default;
+$btn-hover-background-color: #000 !default;
+$btn-hover-border-color: #000 !default;
+
+// 理入框
+$input-border-color: #ccc !default;
+$input-focus-border-color: #666 !default;
+
+$font-sizes: (
+        50: .5rem,
+        60: .6rem,
+        70: .7rem,
+        75: .75rem,
+        80: .8rem,
+        90: .9rem,
+        100: 1rem,
+        125: 1.25rem,
+        150: 1.5rem,
+        175: 1.75rem,
+        200: 2rem,
+        250: 2.5rem,
+        300: 3rem,
+        400: 4rem
+) !default;
+
+$line-heights: (
+        100: 1rem,
+        125: 1.25rem,
+        150: 1.5rem,
+        175: 1.75rem,
+        200: 2rem,
+        250: 2.5rem,
+        300: 3rem,
+        400: 4rem
+) !default;
+
+
+$spacings: (
+        10: .1rem,
+        20: .2rem,
+        25: .25rem,
+        30: .3rem,
+        40: .4rem,
+        50: .5rem,
+        60: .6rem,
+        70: .7rem,
+        75: .75rem,
+        80: .8rem,
+        90: .9rem,
+        100: 1rem,
+        125: 1.25rem,
+        150: 1.5rem,
+        175: 1.75rem,
+        200: 2rem,
+        250: 2.5rem,
+        300: 3rem,
+        400: 4rem
+) !default;

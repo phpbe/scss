@@ -1,0 +1,192 @@
+
+.be-floating {
+
+  position: relative;
+
+  > label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: .75rem;
+    pointer-events: none;
+    border: 1px solid transparent;
+    transform-origin: 0 0;
+    opacity: 0;
+    transition: opacity .1s ease-in-out, transform .1s ease-in-out;
+  }
+
+  > .be-input,
+  > .be-textarea {
+    padding: .75rem;
+  }
+
+  > .be-select {
+    padding: 1.4rem .75rem 0.1rem .75rem;
+    ~ label {
+      opacity: .65;
+      transform: scale(.85) translateY(-.5rem) translateX(.15rem);
+    }
+  }
+
+  > .be-input:focus,
+  > .be-textarea:focus {
+    &::placeholder {
+      color: transparent;
+    }
+  }
+
+  > .be-input:focus,
+  > .be-input:not(:placeholder-shown),
+  > .be-input:-webkit-autofill,
+  > .be-textarea:focus,
+  > .be-textarea:not(:placeholder-shown),
+  > .be-textarea:-webkit-autofill {
+    padding: 1.4rem .75rem 0.1rem .75rem;
+    ~ label {
+      opacity: .65;
+      transform: scale(.85) translateY(-.5rem) translateX(.15rem);
+    }
+  }
+
+}
+
+
+
+.be-input,
+.be-textarea {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: .5rem .75rem;
+  background-clip: padding-box;
+  background-color: #fff;
+  border: 1px solid $input-border-color;
+  appearance: none;
+  border-radius: .25rem;
+  transition: all 0.2s ease-out;
+
+  &[type="file"] {
+    overflow: hidden;
+
+    &:not(:disabled):not([readonly]) {
+      cursor: pointer;
+    }
+  }
+
+  &:focus {
+    border-color: $input-focus-border-color;
+    box-shadow: 0 0 0 1px $input-focus-border-color;
+    outline: 0;
+  }
+
+  // Placeholder
+  &::placeholder {
+    opacity: 1;
+  }
+
+  &:disabled,
+  &[readonly] {
+    background-color: #f1f1f1;
+    opacity: 1;
+  }
+
+  &::file-selector-button,
+  &::-webkit-file-upload-button {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: .5rem .75rem;
+    margin: -.5rem -.75rem;
+    margin-inline-end: .75rem;
+    pointer-events: none;
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    border-inline-end-width: 1px;
+    border-radius: 0;
+    background-color: #eee;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  }
+
+  &:hover:not(:disabled):not([readonly])::file-selector-button,
+  &:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+    background-color: #ddd;
+  }
+}
+
+.be-select {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: .5rem 2.25rem .5rem .75rem;
+  background-clip: padding-box;
+  background-color: #fff;
+  border: 1px solid $input-border-color;
+  appearance: none;
+  border-radius: .25rem;
+  transition: all 0.2s ease-out;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right .75rem center;
+  background-size: 16px 12px;
+}
+
+.be-radio,
+.be-checkbox {
+  width: 1rem;
+  height: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: .25rem;
+  vertical-align: top;
+  border: 1px solid rgba(#000, .25);
+  appearance: none;
+  transition: all 0.2s ease-in-out;
+
+  ~ label {
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  &:focus {
+    border-color: $input-focus-border-color;
+    outline: 0;
+  }
+
+  &:checked {
+    background-color: $input-focus-border-color;
+    border-color: $input-focus-border-color;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    filter: none;
+    opacity: .5;
+  }
+
+  &[disabled],
+  &:disabled {
+    ~ label {
+      opacity: .5;
+    }
+  }
+
+}
+
+.be-radio {
+  border-radius: 50%;
+  &:checked {
+      background-image: url(escape-svg("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#fff'/></svg>"));
+  }
+}
+
+.be-checkbox {
+  border-radius: .25rem;
+  &:checked {
+    background-image: url(escape-svg("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>"));
+  }
+}

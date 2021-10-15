@@ -1,0 +1,50 @@
+
+.be-btn {
+  display: inline-block;
+  font-size: 1rem;
+  padding: .375rem .75rem;
+  border-radius: .25rem;
+  color: $btn-color;
+  background-color: $btn-background-color;
+  border: 1px solid $btn-border-color;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    color: $btn-hover-color;
+    background-color: $btn-hover-background-color;
+    border: 1px solid $btn-hover-border-color;
+    text-decoration: none;
+  }
+
+  &:focus {
+    color: $btn-hover-color;
+    background-color: $btn-hover-background-color;
+    border: 1px solid $btn-hover-border-color;
+    outline: 0;
+  }
+
+  &:disabled,
+  &.disabled {
+    pointer-events: none;
+    opacity: .65;
+  }
+}
+
+.be-btn-sm {
+  font-size: 0.875rem !important;
+  padding: .25rem .5rem !important;
+  border-radius: .2rem !important;
+  min-width: 4rem;
+}
+
+.be-btn-lg {
+  font-size: 1.25rem !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: .3rem !important;
+  min-width: 6rem;
+}

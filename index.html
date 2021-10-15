@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Be Scss</title>
+
+    <link rel="stylesheet" href="src/be.css" />
+
+    <style>
+        html {
+            color: #000;
+            font-size: 16px;
+        }
+
+        body {
+            line-height: 1.5rem;
+        }
+
+        h1 {
+            border-bottom: #eee 1px solid;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        .demo-box {
+            background-color: #f1f1f1;
+            border: #ddd 1px solid;
+            padding: 10px;
+        }
+
+        #demo-grid .demo-box {
+            text-align: center;
+        }
+
+        #demo-spacings .demo-box-spacing {
+            display: inline-block;
+            background-color: #f1f1f1;
+            border: #ddd 1px solid;
+        }
+
+
+        #demo-position .demo-container-position {
+            height: 300px;
+            background-color: #f1f1f1;
+            border: #ddd 1px solid;
+        }
+
+        #demo-position .demo-box-position {
+            width: 30px;
+            height: 30px;
+            background-color: #666;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="be-container be-pb-400">
+
+        <h1>容器（container）</h1>
+        <pre>&lt;div class="be-container"&gt;...&lt;/div&gt;</pre>
+
+        <h1>栅格系统（grid）</h1>
+        <div id="demo-grid">
+            <p>Be 栅格系统为二十四栏布局，没有内外边距，没有内外边距，没有内外边距！</p>
+
+            <h4>按比例自动分配宽度</h4>
+            <div class="be-row be-mb-100">
+                <div class="be-col">
+                    <div class="demo-box">be-col</div>
+                </div>
+                <div class="be-col">
+                    <div class="demo-box">be-col</div>
+                </div>
+            </div>
+
+            <div class="be-row be-mb-100">
+                <div class="be-col">
+                    <div class="demo-box">be-col</div>
+                </div>
+                <div class="be-col">
+                    <div class="demo-box">be-col</div>
+                </div>
+                <div class="be-col">
+                    <div class="demo-box">be-col</div>
+                </div>
+            </div>
+
+            <h4>按内容自动分配宽度</h4>
+            <div class="be-row be-mb-100">
+                <div class="be-col-auto">
+                    <div class="demo-box">be-col-auto 内容多，宽度自动撑大</div>
+                </div>
+                <div class="be-col-auto">
+                    <div class="demo-box">be-col-auto</div>
+                </div>
+                <div class="be-col-auto">
+                    <div class="demo-box">be-col-auto</div>
+                </div>
+            </div>
+
+            <h4>指定宽度</h4>
+            <div class="be-row be-mb-100">
+                <div class="be-col-2">
+                    <div class="demo-box">be-col-2</div>
+                </div>
+                <div class="be-col-4">
+                    <div class="demo-box">be-col-4</div>
+                </div>
+                <div class="be-col-5">
+                    <div class="demo-box">be-col-5</div>
+                </div>
+                <div class="be-col-6">
+                    <div class="demo-box">be-col-6</div>
+                </div>
+                <div class="be-col-7">
+                    <div class="demo-box">be-col-7</div>
+                </div>
+            </div>
+
+            <div class="be-row be-mb-100">
+                <div class="be-col-4">
+                    <div class="demo-box">be-col-4</div>
+                </div>
+                <div class="be-col-5">
+                    <div class="demo-box">be-col-5</div>
+                </div>
+                <div class="be-col-6">
+                    <div class="demo-box">be-col-6</div>
+                </div>
+            </div>
+
+            <h4>指定宽度 + 屏幕识别</h4>
+            <div class="be-row be-mb-100">
+                <div class="be-col-24 be-col-md-12 be-col-lg-8">
+                    <div class="demo-box">be-col-24 be-col-md-12 be-col-lg-8</div>
+                </div>
+                <div class="be-col-24 be-col-md-12 be-col-lg-8">
+                    <div class="demo-box">be-col-24 be-col-md-12 be-col-lg-8</div>
+                </div>
+                <div class="be-col-24 be-col-md-12 be-col-lg-8">
+                    <div class="demo-box">be-col-24 be-col-md-12 be-col-lg-8</div>
+                </div>
+            </div>
+        </div>
+
+
+        <h1>按钮（button）</h1>
+        <div id="demo-btn">
+            <div class="be-mb-100">
+                <input type="button" class="be-btn" value="be-btn" />
+                <button class="be-btn">be-btn（button）</button>
+                <a class="be-btn" href="">be-btn（超链接）</a>
+            </div>
+
+            <div class="be-mb-100">
+                <input type="button" class="be-btn be-btn-sm" value="be-btn be-btn-sm" />
+                <input type="button" class="be-btn be-btn-lg" value="be-btn be-btn-lg" />
+            </div>
+        </div>
+
+        <h1>表单（form）</h1>
+
+        <div id="demo-form">
+
+            <h4>普通表单</h4>
+            <form class="be-mb-100">
+                <div class="be-row be-mb-75">
+                    <div class="be-col-8 be-py-50 be-pr-100 be-ta-right be-fw-bold">
+                        静态文本
+                    </div>
+                    <div class="be-col-16 be-py-50">
+                        静态文本内容
+                    </div>
+                </div>
+
+                <div class="be-row be-mb-75">
+                    <div class="be-col-8 be-py-50 be-pr-100 be-ta-right be-fw-bold">
+                        输入框
+                    </div>
+                    <div class="be-col-16">
+                        <input type="text" class="be-input" />
+                    </div>
+                </div>
+
+                <div class="be-row be-mb-75">
+                    <div class="be-col-8 be-py-50 be-pr-100 be-ta-right be-fw-bold">
+                        密码
+                    </div>
+                    <div class="be-col-16">
+                        <input type="password" class="be-input" />
+                    </div>
+                </div>
+
+                <div class="be-row be-mb-75">
+                    <div class="be-col-8 be-py-50 be-pr-100 be-ta-right be-fw-bold">
+                        下拉框
+                    </div>
+                    <div class="be-col-16">
+                        <select class="be-select">
+                            <option>选项一</option>
+                            <option>选项二</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="be-row be-mb-75">
+                    <div class="be-col-8 be-py-50 be-pr-100 be-ta-right be-fw-bold">
+                        上传文件
+                    </div>
+                    <div class="be-col-16">
+                        <input type="file" class="be-input" placeholder="上传文件" />
+                    </div>
+                </div>
+
+                <div class="be-row be-mb-75">
+                    <div class="be-col-8 be-py-50 be-pr-100 be-ta-right be-fw-bold">
+                        多行文本
+                    </div>
+                    <div class="be-col-16">
+                        <textarea class="be-textarea" placeholder="请输入内容"></textarea>
+                    </div>
+                </div>
+
+
+                <div class="be-row be-mb-75">
+                    <div class="be-col-8 be-py-50 be-pr-100 be-ta-right be-fw-bold">
+                        复选框
+                    </div>
+                    <div class="be-col-16">
+                        <div class="be-py-50">
+
+                            <div class="be-d-inline be-pr-75">
+                                <input type="checkbox" class="be-checkbox" name="checkbox-a" id="checkbox-a-1" />
+                                <label for="checkbox-a-1">
+                                    选项一
+                                </label>
+                            </div>
+
+                            <div class="be-d-inline be-pr-75">
+                                <input type="checkbox" class="be-checkbox" name="checkbox-a" id="checkbox-a-2" />
+                                <label for="checkbox-a-2">
+                                    选项二
+                                </label>
+                            </div>
+
+                            <div class="be-d-inline be-pr-75">
+                                <input type="checkbox" class="be-checkbox" name="checkbox-a" id="checkbox-a-3" disabled />
+                                <label for="checkbox-a-3">
+                                    选项三
+                                </label>
+                            </div>
+
+                            <div class="be-d-inline">
+                                <input type="checkbox" class="be-checkbox" name="checkbox-a" id="checkbox-a-4" checked disabled />
+                                <label for="checkbox-a-4">
+                                    选项四
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="be-row be-mb-75">
+                    <div class="be-col-8 be-py-50 be-pr-100 be-ta-right be-fw-bold">
+                        单选框
+                    </div>
+                    <div class="be-col-16">
+                        <div class="be-py-50">
+                            <div class="be-d-inline be-pr-75">
+                                <input type="radio" class="be-radio" name="radio-a" id="radio-a-1" />
+                                <label for="radio-a-1">
+                                    选项一
+                                </label>
+                            </div>
+
+                            <div class="be-d-inline be-pr-75">
+                                <input type="radio" class="be-radio" name="radio-a" id="radio-a-2" />
+                                <label for="radio-a-2">
+                                    选项二
+                                </label>
+                            </div>
+
+                            <div class="be-d-inline">
+                                <input type="radio" class="be-radio" name="radio-a" id="radio-a-3" disabled />
+                                <label for="radio-a-3">
+                                    选项三
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="be-row">
+                    <div class="be-col-8">
+                    </div>
+                    <div class="be-col-16">
+                        <input type="button" class="be-btn" value="提交" />
+                    </div>
+                </div>
+            </form>
+
+
+            <h4>浮动标签</h4>
+            <form class="be-mb-100">
+                <div class="be-floating be-mb-75">
+                    <input type="text" class="be-input" placeholder="请输入用户名" />
+                    <label>用户名</label>
+                </div>
+
+                <div class="be-floating be-mb-75">
+                    <input type="password" class="be-input" placeholder="请输入密码" />
+                    <label>密码</label>
+                </div>
+
+                <div class="be-floating be-mb-75">
+                    <select class="be-select">
+                        <option>选项一</option>
+                        <option>选项二</option>
+                    </select>
+                    <label>下拉框</label>
+                </div>
+
+                <div class="be-floating be-mb-75">
+                    <textarea class="be-textarea" placeholder="请输入描述信息"></textarea>
+                    <label>描述</label>
+                </div>
+
+                <input type="button" class="be-btn" value="提交" />
+            </form>
+        </div>
+
+
+
+
+
+        <h1>颜色（color）</h1>
+        <div id="demo-color">
+            <p>
+                <strong>命名规则：</strong>be-c-后缀值<br />
+                <strong>后缀值：</strong>常用颜色<br/>
+            </p>
+
+            <div class="be-c-000 be-p-20">be-c-000 或 be-c-dark</div>
+            <div class="be-c-111 be-p-20">be-c-111</div>
+            <div class="be-c-222 be-p-20">be-c-222</div>
+            <div class="be-c-333 be-p-20">be-c-333</div>
+            <div class="be-c-444 be-p-20">be-c-444</div>
+            <div class="be-c-555 be-p-20">be-c-555</div>
+            <div class="be-c-666 be-p-20">be-c-666</div>
+            <div class="be-c-777 be-p-20">be-c-777</div>
+            <div class="be-c-888 be-p-20">be-c-888</div>
+            <div class="be-c-999 be-p-20">be-c-999</div>
+            <div class="be-c-aaa be-p-20">be-c-aaa</div>
+            <div class="be-c-bbb be-p-20">be-c-bbb</div>
+            <div class="be-c-ccc be-p-20">be-c-ccc</div>
+            <div class="be-c-ddd be-p-20">be-c-ddd</div>
+            <div class="be-c-eee be-p-20">be-c-eee</div>
+            <div class="be-c-fff be-p-20" style="background-color: #bbb;">be-c-fff 或 be-c-white</div>
+        </div>
+
+
+
+        <h1>显示方式（display）</h1>
+        <div id="demo-display">
+            <p>
+                <strong>命名规则：</strong>be-d-后缀值<br />
+                <strong>后缀值：</strong>常用显示方式<br/>
+                <strong>后缀值列表：</strong>none, inline，block, inline-block, flex
+            </p>
+
+            <pre>&lt;div class="be-d-flex"&gt;...&lt;/div&gt;</pre>
+
+            <div class="be-d-flex be-mb-100">
+                <div class="be-flex-1">
+                    <div class="demo-box">
+                        be-flex-1
+                    </div>
+                </div>
+                <div class="be-flex-1">
+                    <div class="demo-box">
+                        be-flex-1
+                    </div>
+                </div>
+            </div>
+
+            <div class="be-d-flex be-mb-100">
+                <div class="be-flex-0">
+                    <div class="demo-box">
+                        be-flex-0
+                    </div>
+                </div>
+                <div class="be-flex-0">
+                    <div class="demo-box">
+                        be-flex-0
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <h1>浮动（float）</h1>
+        <div id="demo-float">
+            <p>
+                <strong>be-fl：</strong>左浮动，float: left<br />
+                <strong>be-fr：</strong>右浮动，float: right<br/>
+                <strong>be-fc：</strong>清除浮动
+            </p>
+
+            <div class="be-mb-100 be-fc">
+                <div class="be-fl">
+                    <div class="demo-box">
+                        be-fl，浮动告左，对应样式： float: left;
+                    </div>
+                </div>
+
+                <div class="be-fr">
+                    <div class="demo-box">
+                        be-fr，浮动告右，对应样式： float: right;
+                    </div>
+                </div>
+            </div>
+
+            <div class="be-mb-100">
+                清除浮动：be-fc，在浮动元素的父级元素上添加。
+            </div>
+        </div>
+
+        <h1>文字大小（font-size）</h1>
+        <p>
+            <strong>命名规则：</strong>be-fs-后缀值<br />
+            <strong>后缀值：</strong>rem(根元素的字体大小) &times; 100， 即10表示0.1rem，125表示1.25rem<br/>
+            <strong>后缀值列表：</strong>50, 60, 70, 75, 80, 90, 100, 125, 150, 175, 200, 250, 300, 400
+        </p>
+        <div class="demo-box be-fs-50 be-lh-50 be-mb-100">be-fs-50</div>
+        <div class="demo-box be-fs-75 be-lh-75 be-mb-100">be-fs-75</div>
+        <div class="demo-box be-fs-100 be-lh-100 be-mb-100">be-fs-100</div>
+        <div class="demo-box be-fs-125 be-lh-125 be-mb-100">be-fs-125</div>
+        <div class="demo-box be-fs-200 be-lh-200 be-mb-100">be-fs-200</div>
+        <div class="demo-box be-fs-400 be-lh-400 be-mb-100">be-fs-400</div>
+
+        <h1>文字样式（font-style）</h1>
+        <p>
+            <strong>命名规则：</strong>be-fs-后缀值<br />
+            <strong>后缀值列表：</strong>normal, italic
+        </p>
+        <div class="demo-box be-fs-normal be-mb-100">be-fs-normal</div>
+        <div class="demo-box be-fs-italic be-mb-100">be-fs-italic</div>
+
+
+        <h1>文字加粗（font-weight）</h1>
+        <p>
+            <strong>命名规则：</strong>be-fw-后缀值<br />
+            <strong>后缀值列表：</strong>normal, bold, bolder, light, lighter
+        </p>
+        <div class="demo-box be-fw-normal be-mb-100">be-fw-normal</div>
+        <div class="demo-box be-fw-bold be-mb-100">be-fw-bold</div>
+        <div class="demo-box be-fw-bolder be-mb-100">be-fw-bolder</div>
+        <div class="demo-box be-fw-light be-mb-100">be-fw-light</div>
+        <div class="demo-box be-fw-lighter be-mb-100">be-fw-lighter</div>
+
+
+        <h1>行高（line-height）</h1>
+        <p>
+            <strong>命名规则：</strong>be-lh-后缀值<br />
+            <strong>后缀值：</strong>rem(根元素的字体大小) &times; 100， 即10表示0.1rem，125表示1.25rem<br/>
+            <strong>后缀值列表：</strong>100, 125, 150, 175, 200, 250, 300, 400
+        </p>
+        <div class="demo-box be-fs-100 be-lh-100 be-mb-100">be-lh-100</div>
+        <div class="demo-box be-fs-150 be-lh-150 be-mb-100">be-lh-150</div>
+        <div class="demo-box be-fs-200 be-lh-200 be-mb-100">be-lh-200</div>
+        <div class="demo-box be-fs-400 be-lh-400 be-mb-100">be-lh-400</div>
+
+
+
+        <h1>边距（spacing）</h1>
+        <div id="demo-spacings">
+            <p>
+                <strong>后缀值：</strong>rem(根元素的字体大小) &times; 100， 即10表示0.1rem，125表示1.25rem<br/>
+                <strong>后缀值列表：</strong>10, 20, 25, 30, 40, 50, 60, 70, 75, 80, 90, 100, 125, 150, 175, 200, 250, 300, 400
+            </p>
+
+            <h3>内边距（padding）</h3>
+            <p>内边距采用 "p" 缩写，l, r, t, b 表示左右上下， x, y  表示横向和缀向</p>
+            <p>
+                <strong>命名规则：</strong>be-p[l,r,t,b,x,y]-后缀值<br />
+                <strong>be-p-*：</strong>四周内边距：padding<br />
+                <strong>be-pl-*：</strong>左侧内边距：padding-left<br />
+                <strong>be-pr-*：</strong>右侧内边距：padding-right<br />
+                <strong>be-px-*：</strong>横向内边距：padding-left + padding-right<br />
+                <strong>be-pt-*：</strong>顶部内边距：padding-top<br />
+                <strong>be-pb-*：</strong>底部内边距：padding-bottom<br />
+                <strong>be-py-*：</strong>纵向内边距：padding-top + padding-bottom
+            </p>
+
+            <div class="be-row">
+                <div class="be-col-24 be-col-md-12">
+                    <div class="demo-box-spacing be-p-10 be-mb-100">
+                        be-p-10 相当于：padding: 0.1rem
+                    </div>
+
+                    <div class="demo-box-spacing be-p-25 be-mb-100">
+                        be-p-25 相当于：padding: 0.25rem
+                    </div>
+
+                    <div class="demo-box-spacing be-p-100 be-mb-100">
+                        be-p-100 相当于：padding: 1rem
+                    </div>
+                </div>
+
+                <div class="be-col-24 be-col-md-12">
+
+                    <div class="demo-item">
+                        <div class="demo-box-spacing be-p-125 be-mb-100">
+                            be-p-125 相当于：padding: 1.25rem
+                        </div>
+                    </div>
+
+                    <div class="demo-item">
+                        <div class="demo-box-spacing be-p-200 be-mb-100">
+                            be-p-200 相当于：padding: 2rem
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="be-row">
+                <div class="be-col-24 be-col-md-12">
+                    <div class="demo-item">
+                        <div class="demo-box-spacing be-pl-100 be-mb-100">
+                            be-pl-125 相当于：padding-left: 1.25rem<br/>
+                            be-pl-* 其中 * 支持所有后缀值,
+                        </div>
+                    </div>
+                </div>
+
+                <div class="be-col-24 be-col-md-12">
+                    <div class="demo-item">
+                        <div class="demo-box-spacing be-px-100 be-mb-100">
+                            be-px-125 相当于：padding-left: 1.25rem; padding-right: 1.25rem<br/>
+                            be-px-* 其中 * 支持所有后缀值,
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <h3>外边距（margin）</h3>
+            <p>外边距除了采用 "m" 缩写，其它属性与用法与内边距完全一致。</p>
+            <p>
+                <strong>命名规则：</strong>be-m[l,r,t,b,x,y]-后缀值<br />
+                <strong>be-m-*：</strong>四周内边距：margin<br />
+                <strong>be-ml-*：</strong>左侧内边距：margin-left<br />
+                <strong>be-mr-*：</strong>右侧内边距：margin-right<br />
+                <strong>be-mx-*：</strong>横向内边距：margin-left + margin-right<br />
+                <strong>be-mt-*：</strong>顶部内边距：margin-top<br />
+                <strong>be-mb-*：</strong>底部内边距：margin-bottom<br />
+                <strong>be-my-*：</strong>纵向内边距：margin-top + margin-bottom<br />
+            </p>
+        </div>
+
+
+
+        <h1>定位（position）</h1>
+
+        <h4>父容器</h4>
+        <p>
+            <strong>命名规则：</strong>be-p-后缀值<br />
+            <strong>后缀值：</strong>对齐方式<br/>
+            <strong>后缀值列表：</strong>absolute, fixed, relative, static, sticky
+        </p>
+
+        <div class="be-row">
+            <div class="be-col-24 be-col-md-12 be-col-xl-6">
+                <h4>子容器 left 定位</h4>
+                <p>
+                    <strong>命名规则：</strong>be-l-后缀值<br />
+                    <strong>后缀值：</strong>百分比值<br/>
+                    <strong>后缀值列表：</strong>0, 50, 100<br />
+                </p>
+            </div>
+            <div class="be-col-24 be-col-md-12 be-col-xl-6">
+                <h4>子容器 right 定位</h4>
+                <p>
+                    <strong>命名规则：</strong>be-r-后缀值<br />
+                    <strong>后缀值：</strong>百分比值<br/>
+                    <strong>后缀值列表：</strong>0, 50, 100<br />
+                </p>
+            </div>
+
+            <div class="be-col-24 be-col-md-12 be-col-xl-6">
+                <h4>子容器 top 定位</h4>
+                <p>
+                    <strong>命名规则：</strong>be-t-后缀值<br />
+                    <strong>后缀值：</strong>百分比值<br/>
+                    <strong>后缀值列表：</strong>0, 50, 100<br />
+                </p>
+            </div>
+            <div class="be-col-24 be-col-md-12 be-col-xl-6">
+                <h4>子容器 bottom 定位</h4>
+                <p>
+                    <strong>命名规则：</strong>be-b-后缀值<br />
+                    <strong>后缀值：</strong>百分比值<br/>
+                    <strong>后缀值列表：</strong>0, 50, 100<br />
+                </p>
+            </div>
+        </div>
+
+
+
+
+
+        <h4>位置转换（transform: translate）</h4>
+        <p>
+            <strong>命名规则：</strong>be-t-translate-后缀值<br />
+            <strong>后缀值列表：</strong>middle, x-middle, y-middle<br />
+            <strong>be-t-translate-middle：</strong>transform: translate(-50%, -50%)<br />
+            <strong>be-t-translate-x-middle：</strong>transform: translateX(-50%)<br />
+            <strong>be-t-translate-y-middle：</strong>transform: translateY(-50%)<br />
+        </p>
+
+        <div id="demo-position">
+            <div class="be-row">
+                <div class="be-col-24 be-col-md-12">
+                    <div class="be-p-100">
+                        <div class="be-p-relative demo-container-position">
+                            <div class="demo-box-position be-p-absolute be-t-0 be-l-0 be-t-translate-middle"></div>
+                            <div class="demo-box-position be-p-absolute be-t-0 be-l-50 be-t-translate-middle"></div>
+                            <div class="demo-box-position be-p-absolute be-t-0 be-l-100 be-t-translate-middle"></div>
+                            <div class="demo-box-position be-p-absolute be-t-50 be-l-0 be-t-translate-middle"></div>
+                            <div class="demo-box-position be-p-absolute be-t-50 be-l-50 be-t-translate-middle"></div>
+                            <div class="demo-box-position be-p-absolute be-t-50 be-l-100 be-t-translate-middle"></div>
+                            <div class="demo-box-position be-p-absolute be-t-100 be-l-0 be-t-translate-middle"></div>
+                            <div class="demo-box-position be-p-absolute be-t-100 be-l-50 be-t-translate-middle"></div>
+                            <div class="demo-box-position be-p-absolute be-t-100 be-l-100 be-t-translate-middle"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="be-col-24 be-col-md-12">
+                    <div class="be-p-100">
+                        <div class="be-p-relative demo-container-position">
+                            <div class="demo-box-position be-p-absolute be-t-0 be-l-0"></div>
+                            <div class="demo-box-position be-p-absolute be-t-0 be-l-50 be-t-translate-x-middle"></div>
+                            <div class="demo-box-position be-p-absolute be-t-0 be-r-0"></div>
+                            <div class="demo-box-position be-p-absolute be-t-50 be-l-0 be-t-translate-y-middle"></div>
+                            <div class="demo-box-position be-p-absolute be-t-50 be-l-50 be-t-translate-middle"></div>
+                            <div class="demo-box-position be-p-absolute be-t-50 be-r-0 be-t-translate-y-middle"></div>
+                            <div class="demo-box-position be-p-absolute be-b-0 be-l-0"></div>
+                            <div class="demo-box-position be-p-absolute be-b-0 be-l-50 be-t-translate-x-middle"></div>
+                            <div class="demo-box-position be-p-absolute be-b-0 be-r-0"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <h1>文本辅助（text）</h1>
+        <p>
+            <strong>命名规则：</strong>be-t-后缀值<br />
+            <strong>be-t-ellipsis：</strong>文本溢出时省略号<br />
+            <strong>be-t-break：</strong>强制换行
+        </p>
+        <div class="demo-box be-mb-100 be-t-ellipsis">be-t-ellipsis：longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglong text</div>
+        <div class="demo-box be-mb-100 be-t-break">be-t-break：longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglong text</div>
+
+
+
+        <h1>文本对齐（text-align）</h1>
+        <p>
+            <strong>命名规则：</strong>be-ta-后缀值<br />
+            <strong>后缀值：</strong>对齐方式<br/>
+        </p>
+        <div class="be-d-flex">
+            <div class="be-w-30">
+                <div class="demo-box be-ta-left">
+                    be-ta-left
+                </div>
+            </div>
+            <div class="be-w-5"></div>
+            <div class="be-w-30">
+                <div class="demo-box be-ta-center">
+                    be-ta-center
+                </div>
+            </div>
+            <div class="be-w-5"></div>
+            <div class="be-w-30">
+                <div class="demo-box be-ta-right">
+                    be-ta-right
+                </div>
+            </div>
+        </div>
+
+
+        <h1>重直对齐（vertical-align）</h1>
+        <p>
+            <strong>命名规则：</strong>be-va-后缀值<br />
+            <strong>后缀值：</strong>对齐方式<br/>
+        </p>
+        <div class="demo-box">
+            <span class="be-va-baseline be-pr-50">be-va-baseline</span>
+            <span class="be-va-top be-pr-50">be-va-top</span>
+            <span class="be-va-middle be-pr-50">be-va-middle</span>
+            <span class="be-va-bottom be-pr-50">be-va-bottom</span>
+            <span class="be-va-text-top be-pr-50">be-va-text-top</span>
+            <span class="be-va-text-bottom">be-va-text-bottom</span>
+        </div>
+
+
+        <h1>文本装饰（text-decoration）</h1>
+        <p>
+            <strong>命名规则：</strong>be-td-后缀值<br />
+            <strong>后缀值列表：</strong>underline, line-through,  none
+        </p>
+        <div class="demo-box be-mb-100">be-td-underline：<span class="be-td-underline">Demo Text</span></div>
+        <div class="demo-box be-mb-100">be-td-line-through：<span class="be-td-line-through">Demo Text</span></div>
+        <div class="demo-box be-mb-100">be-td-none：<a href="#" class="be-td-none">Demo Text</a></div>
+
+
+        <h1>文本转换（text-transform）</h1>
+        <p>
+            <strong>命名规则：</strong>be-tt-后缀值<br />
+            <strong>后缀值列表：</strong>lowercase, uppercase, capitalize, none
+        </p>
+        <div class="demo-box be-mb-100">be-tt-lowercase：<span class="be-tt-lowercase">Demo Text</span></div>
+        <div class="demo-box be-mb-100">be-tt-uppercase：<span class="be-tt-uppercase">demo text</span></div>
+        <div class="demo-box be-mb-100">be-tt-capitalize：<span class="be-tt-capitalize">demo text</span></div>
+        <div class="demo-box be-mb-100">be-tt-none：<span class="be-tt-none">demo text</span></div>
+
+
+
+        <h1>文本选择（user-select）</h1>
+        <p>
+            <strong>命名规则：</strong>be-us-后缀值<br />
+            <strong>后缀值列表：</strong>all, auto, none
+        </p>
+        <div class="demo-box be-mb-100 be-us-all">be-us-all：自动选中所有文本内容</div>
+        <div class="demo-box be-mb-100 be-us-auto">be-us-auto：用户控制选中的文本</div>
+        <div class="demo-box be-mb-100 be-us-none">be-us-none：禁止选中文本</div>
+
+
+
+        <h1>宽度（width）</h1>
+        <p>宽度采用 "w" 缩写</p>
+        <p>
+            <strong>命名规则：</strong>be-w-百分比，百分比取值范围：1~100
+        </p>
+        <div class="be-w-67 be-mb-100">
+            <div class="demo-box">
+                be-w-67， 宽度 67%
+            </div>
+        </div>
+        <div class="be-w-100 be-mb-100">
+            <div class="demo-box">
+                be-w-100， 宽度 100%
+            </div>
+        </div>
+
+
+
+    </div>
+</body>
+</html>

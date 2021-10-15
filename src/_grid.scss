@@ -1,0 +1,34 @@
+
+.be-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.be-col {
+  flex: 1 0 0%;
+}
+
+.be-col-auto {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+@for $i from 1 through $grid-columns {
+  .be-col-#{$i} {
+    flex: 0 0 auto;
+    width: percentage(divide($i, $grid-columns));
+  }
+}
+
+@each $breakpoint, $min in $breakpoints {
+  @if $min != 0 {
+    @media (min-width: $min) {
+      @for $i from 1 through $grid-columns {
+        .be-col-#{$breakpoint}-#{$i} {
+          flex: 0 0 auto;
+          width: percentage(divide($i, $grid-columns));
+        }
+      }
+    }
+  }
+}
