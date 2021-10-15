@@ -1,0 +1,18 @@
+{
+  "name": "be/scss",
+  "type": "library",
+  "description": "PHP BE 前端框架",
+  "keywords": [
+    "PHP",
+    "Be",
+    "scss"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "liu12",
+      "email": "i@liu12.com",
+      "homepage": "http://www.liu12.com/"
+    }
+  ]
+}
