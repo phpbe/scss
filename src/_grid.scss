@@ -13,20 +13,28 @@
   width: auto;
 }
 
-@for $i from 1 through $grid-columns {
+@for $i from 0 through $grid-columns {
   .be-col-#{$i} {
     flex: 0 0 auto;
-    width: percentage(divide($i, $grid-columns));
+    @if $i == 0 {
+      display: none;
+    } @else {
+      width: percentage(divide($i, $grid-columns));
+    }
   }
 }
 
 @each $breakpoint, $min in $breakpoints {
   @if $min != 0 {
     @media (min-width: $min) {
-      @for $i from 1 through $grid-columns {
+      @for $i from 0 through $grid-columns {
         .be-col-#{$breakpoint}-#{$i} {
           flex: 0 0 auto;
-          width: percentage(divide($i, $grid-columns));
+          @if $i == 0 {
+            display: none;
+          } @else {
+            width: percentage(divide($i, $grid-columns));
+          }
         }
       }
     }
