@@ -17,7 +17,8 @@
   .be-col-#{$i} {
     flex: 0 0 auto;
     @if $i == 0 {
-      display: none;
+      width: 0;
+      overflow: hidden;
     } @else {
       width: percentage(divide($i, $grid-columns));
     }
