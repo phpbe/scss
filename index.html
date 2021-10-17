@@ -664,17 +664,28 @@
         <p>
             <strong>命名规则：</strong>be-t-后缀值<br />
             <strong>be-t-ellipsis：</strong>文本溢出时省略号<br />
+            <strong>be-t-ellipsis-2：</strong>文本2行溢出时省略号，此类不能与 padding 同时用在同一个元素上，可以嵌套一层，外层 padding，内层处理文本截断。<br />
             <strong>be-t-break：</strong>强制换行
         </p>
 
         <div class="be-row be-mb-100">
             <div class="be-col-11">
-                <div class="demo-box be-t-ellipsis">be-t-ellipsis：longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglong text</div>
+                <div class="demo-box be-mb-50 be-t-ellipsis">be-t-ellipsis：longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglong text</div>
+                <div class="demo-box">
+                    <div class="be-t-ellipsis-2">
+                        be-t-ellipsis-2：longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglong text
+                    </div>
+                </div>
             </div>
             <div class="be-col-2">
             </div>
             <div class="be-col-11">
-                <div class="demo-box be-t-ellipsis">be-t-ellipsis：长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长 文本</div>
+                <div class="demo-box be-mb-50 be-t-ellipsis">be-t-ellipsis：长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长 文本</div>
+                <div class="demo-box">
+                    <div class="be-t-ellipsis-2">
+                        be-t-ellipsis-2：长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长长 文本
+                    </div>
+                </div>
             </div>
         </div>
 
