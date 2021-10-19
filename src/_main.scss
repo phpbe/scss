@@ -4,3 +4,51 @@
 *::after {
   box-sizing: border-box;
 }
+
+.be-html {
+
+}
+
+.be-body {
+  margin: 0;
+}
+
+.be-h1,
+.be-h2,
+.be-h3,
+.be-h4,
+.be-h5,
+.be-h6 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.be-h1 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+}
+
+.be-h2 {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.be-h3 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.be-h4 {
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+}
+
+.be-h5 {
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+.be-h6 {
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+}
