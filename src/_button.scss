@@ -36,6 +36,12 @@
   }
 }
 
+.be-btn-light {
+  color: inherit;
+  background-color: #fff;
+  border: 1px solid $btn-light-border-color;
+}
+
 .be-btn-sm {
   font-size: 0.875rem;
   padding: .25rem .5rem;
