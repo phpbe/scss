@@ -374,23 +374,25 @@
                 <strong>命名规则：</strong>be-c-后缀值<br />
                 <strong>后缀值：</strong>常用颜色<br/>
             </p>
-
             <div class="be-c-000 be-p-20">be-c-000 或 be-c-dark</div>
-            <div class="be-c-111 be-p-20">be-c-111</div>
-            <div class="be-c-222 be-p-20">be-c-222</div>
-            <div class="be-c-333 be-p-20">be-c-333</div>
-            <div class="be-c-444 be-p-20">be-c-444</div>
-            <div class="be-c-555 be-p-20">be-c-555</div>
-            <div class="be-c-666 be-p-20">be-c-666</div>
-            <div class="be-c-777 be-p-20">be-c-777</div>
-            <div class="be-c-888 be-p-20">be-c-888</div>
-            <div class="be-c-999 be-p-20">be-c-999</div>
-            <div class="be-c-aaa be-p-20">be-c-aaa</div>
-            <div class="be-c-bbb be-p-20">be-c-bbb</div>
-            <div class="be-c-ccc be-p-20">be-c-ccc</div>
-            <div class="be-c-ddd be-p-20">be-c-ddd</div>
-            <div class="be-c-eee be-p-20">be-c-eee</div>
+
+            <script>
+                var arr = ['111','222','333','444','555','666','777','888','999','aaa','bbb','ccc','ddd','eee'];
+                var len = arr.length;
+                for(var i = 0; i < len; i++) {
+                    document.write('<div class="be-c-'+arr[i]+' be-p-20">be-c-'+arr[i]+'</div>');
+                }
+            </script>
+
             <div class="be-c-fff be-p-20" style="background-color: #bbb;">be-c-fff 或 be-c-white</div>
+
+            <script>
+                var arr = ["blue","indigo","purple","pink","red","orange","yellow","green","teal","cyan"];
+                var len = arr.length;
+                for(var i = 0; i < len; i++) {
+                    document.write('<div class="be-c-'+arr[i]+' be-p-20">be-c-'+arr[i]+'</div>');
+                }
+            </script>
         </div>
 
 
