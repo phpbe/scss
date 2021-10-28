@@ -40,6 +40,14 @@
   color: inherit;
   background-color: #fff;
   border: 1px solid $btn-light-border-color;
+
+  &:disabled,
+  &.disabled {
+    color: #999;
+    background-color: #fafafa;
+    pointer-events: none;
+    opacity: .65;
+  }
 }
 
 .be-btn-sm {
