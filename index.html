@@ -167,24 +167,54 @@
 
         <h2 class="be-h2 be-pb-50 be-mt-400 be-mb-100">按钮（button）</h2>
         <div id="demo-btn">
+
             <div class="be-mb-100">
-                <input type="button" class="be-btn" value="be-btn">
-                <input type="button" class="be-btn" value="be-btn" disabled>
-                <button class="be-btn">be-btn（button）</button>
-                <button class="be-btn" disabled>be-btn（button）</button>
-                <a class="be-btn" href="">be-btn（超链接）</a>
-                <a class="be-btn disabled" href="">be-btn（超链接）</a>
+                <input type="button" class="be-mt-50 be-btn be-btn-primary" value="be-btn be-btn-primary">
+                <input type="button" class="be-mt-50 be-btn be-btn-secondary" value="be-btn be-btn-secondary">
+                <input type="button" class="be-mt-50 be-btn be-btn-success" value="be-btn be-btn-success">
+                <input type="button" class="be-mt-50 be-btn be-btn-danger" value="be-btn be-btn-danger">
+                <input type="button" class="be-mt-50 be-btn be-btn-warning" value="be-btn be-btn-warning">
+                <input type="button" class="be-mt-50 be-btn be-btn-info" value="be-btn be-btn-info">
             </div>
 
             <div class="be-mb-100">
-                <input type="button" class="be-btn be-btn-sm" value="be-btn be-btn-sm">
-                <input type="button" class="be-btn be-btn-lg" value="be-btn be-btn-lg">
+                <input type="button" class="be-mt-50 be-btn be-btn-primary" value="be-btn be-btn-primary" disabled>
+                <input type="button" class="be-mt-50 be-btn be-btn-secondary" value="be-btn be-btn-secondary" disabled>
+                <input type="button" class="be-mt-50 be-btn be-btn-success" value="be-btn be-btn-success" disabled>
+                <input type="button" class="be-mt-50 be-btn be-btn-danger" value="be-btn be-btn-danger" disabled>
+                <input type="button" class="be-mt-50 be-btn be-btn-warning" value="be-btn be-btn-warning" disabled>
+                <input type="button" class="be-mt-50 be-btn be-btn-info" value="be-btn be-btn-info" disabled>
             </div>
 
             <div class="be-mb-100">
-                <input type="button" class="be-btn be-btn-light" value="be-btn be-btn-light">
-                <input type="button" class="be-btn be-btn-light" value="be-btn be-btn-light" disabled>
+                <input type="button" class="be-mt-50 be-btn be-btn-outline-primary" value="be-btn be-btn-outline-primary">
+                <input type="button" class="be-mt-50 be-btn be-btn-outline-secondary" value="be-btn be-btn-outline-secondary">
+                <input type="button" class="be-mt-50 be-btn be-btn-outline-success" value="be-btn be-btn-outline-success">
+                <input type="button" class="be-mt-50 be-btn be-btn-outline-danger" value="be-btn be-btn-outline-danger">
+                <input type="button" class="be-mt-50 be-btn be-btn-outline-warning" value="be-btn be-btn-outline-warning">
+                <input type="button" class="be-mt-50 be-btn be-btn-outline-info" value="be-btn be-btn-outline-info">
             </div>
+
+            <div class="be-mb-100">
+                <input type="button" class="be-mt-50 be-btn be-btn-outline-primary" value="be-btn be-btn-outline-primary" disabled>
+                <input type="button" class="be-mt-50 be-btn be-btn-outline-secondary" value="be-btn be-btn-outline-secondary" disabled>
+                <input type="button" class="be-mt-50 be-btn be-btn-outline-success" value="be-btn be-btn-outline-success" disabled>
+                <input type="button" class="be-mt-50 be-btn be-btn-outline-danger" value="be-btn be-btn-outline-danger" disabled>
+                <input type="button" class="be-mt-50 be-btn be-btn-outline-warning" value="be-btn be-btn-outline-warning" disabled>
+                <input type="button" class="be-mt-50 be-btn be-btn-outline-info" value="be-btn be-btn-outline-info" disabled>
+            </div>
+
+            <div class="be-mb-100">
+                <input type="button" class="be-mt-50 be-btn be-btn-primary" value="be-btn be-btn-primary">
+                <button class="be-mt-50 be-btn be-btn-primary">be-btn be-btn-primary（button）</button>
+                <a class="be-mt-50 be-btn be-btn-primary" href="">be-btn be-btn-primary（超链接）</a>
+            </div>
+
+            <div class="be-mb-100">
+                <input type="button" class="be-mt-50 be-btn be-btn-primary be-btn-sm" value="be-btn be-btn-primary be-btn-sm">
+                <input type="button" class="be-mt-50 be-btn be-btn-primary be-btn-lg" value="be-btn be-btn-primary be-btn-lg">
+            </div>
+
         </div>
 
         <h2 class="be-h2 be-pb-50 be-mt-400 be-mb-100">表单（form）</h2>
@@ -396,6 +426,14 @@
 
             <script>
                 var arr = ["blue","indigo","purple","pink","red","orange","yellow","green","teal","cyan"];
+                var len = arr.length;
+                for(var i = 0; i < len; i++) {
+                    document.write('<div class="be-c-'+arr[i]+' be-p-20">be-c-'+arr[i]+'</div>');
+                }
+            </script>
+
+            <script>
+                var arr = ["primary","secondary","success","danger","warning","info"];
                 var len = arr.length;
                 for(var i = 0; i < len; i++) {
                     document.write('<div class="be-c-'+arr[i]+' be-p-20">be-c-'+arr[i]+'</div>');

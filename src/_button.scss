@@ -5,46 +5,30 @@
   line-height: 1.5rem;
   padding: .375rem .75rem;
   border-radius: .25rem;
-  color: $btn-color;
-  background-color: $btn-background-color;
-  border: 1px solid $btn-border-color;
   text-align: center;
   vertical-align: middle;
+  color: #666;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
   cursor: pointer;
   user-select: none;
   text-decoration: none;
   transition: all 0.2s ease-out;
 
   &:hover {
-    color: $btn-hover-color;
-    background-color: $btn-hover-background-color;
-    border: 1px solid $btn-hover-border-color;
+    color: #333;
+    background-color: #eee;
     text-decoration: none;
   }
 
   &:focus {
-    color: $btn-hover-color;
-    background-color: $btn-hover-background-color;
-    border: 1px solid $btn-hover-border-color;
+    color: #333;
+    background-color: #eee;
     outline: 0;
   }
 
   &:disabled,
   &.disabled {
-    pointer-events: none;
-    opacity: .65;
-  }
-}
-
-.be-btn-light {
-  color: inherit;
-  background-color: #fff;
-  border: 1px solid $btn-light-border-color;
-
-  &:disabled,
-  &.disabled {
-    color: #999;
-    background-color: #fafafa;
     pointer-events: none;
     opacity: .65;
   }
@@ -62,4 +46,44 @@
   padding: 0.5rem 1rem;
   border-radius: .3rem;
   min-width: 6rem;
+}
+
+
+@each $name, $theme-color in $theme-colors {
+  .be-btn-#{$name} {
+    color: #fff;
+    background-color: $theme-color;
+    border: 1px solid $theme-color;
+
+    &:hover {
+      color: #fff;
+      background-color: mix(black, $theme-color, 20%);
+      border: 1px solid mix(black, $theme-color, 20%);
+    }
+
+    &:focus {
+      color: #fff;
+      background-color: mix(black, $theme-color, 20%);
+      border: 1px solid mix(black, $theme-color, 20%);
+    }
+  }
+
+  .be-btn-outline-#{$name} {
+    color: $theme-color;
+    background-color: #fff;
+    border: 1px solid $theme-color;
+
+    &:hover {
+      color: #fff;
+      background-color: $theme-color;
+      border: 1px solid $theme-color;
+    }
+
+    &:focus {
+      color: #fff;
+      background-color: $theme-color;
+      border: 1px solid $theme-color;
+    }
+  }
+
 }

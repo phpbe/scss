@@ -18,19 +18,6 @@ $container-max-widths: (
 // 布局分栏数
 $grid-columns: 24 !default;
 
-
-// 按钮样式
-$btn-color: #fff !default;
-$btn-background-color: #333 !default;
-$btn-border-color: #333 !default;
-
-$btn-light-border-color: #ccc !default;
-
-// 按钮悬停样式
-$btn-hover-color: #fff !default;
-$btn-hover-background-color: #000 !default;
-$btn-hover-border-color: #000 !default;
-
 // 理入框
 $input-border-color: #ccc !default;
 $input-focus-border-color: #666 !default;
@@ -56,6 +43,21 @@ $colors: (
         "green":      $green,
         "teal":       $teal,
         "cyan":       $cyan,
+) !default;
+
+$primary:       $orange !default;
+$secondary:     #666 !default;
+$success:       $green !default;
+$danger:        $red !default;
+$warning:       $yellow !default;
+$info:          $cyan !default;
+$theme-colors: (
+        "primary":    $primary,
+        "secondary":  $secondary,
+        "success":    $success,
+        "danger":     $danger,
+        "warning":    $warning,
+        "info":       $info,
 ) !default;
 
 
