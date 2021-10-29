@@ -60,28 +60,81 @@
 
 @each $name, $color in $colors {
   .be-btn-#{$name} {
-    color: #fff;
-    background-color: $color;
-    border: 1px solid $color;
+    color: #fff !important;
+    background-color: $color !important;
+    border: 1px solid $color !important;
 
     &:hover,
     &:focus {
-      color: #fff;
-      background-color: mix(black, $color, 20%);
-      border: 1px solid mix(black, $color, 20%);
+      color: #fff !important;
+      background-color: mix(black, $color, 20%) !important;
+      border: 1px solid mix(black, $color, 20%) !important;
     }
   }
 
   .be-btn-outline-#{$name} {
-    color: $color;
-    background-color: #fff;
-    border: 1px solid $color;
+    color: $color !important;
+    background-color: #fff !important;
+    border: 1px solid $color !important;
 
     &:hover,
     &:focus {
-      color: #fff;
-      background-color: $color;
-      border: 1px solid $color;
+      color: #fff !important;
+      background-color: $color !important;
+      border: 1px solid $color !important;
     }
+  }
+}
+
+.be-btn-gray {
+  color: #666 !important;
+  background-color: #eee !important;
+  border: 1px solid #999 !important;
+
+  &:hover,
+  &:focus {
+    color: #333 !important;
+    background-color: #ccc !important;
+    border: 1px solid #999 !important;
+  }
+}
+
+.be-btn-outline-gray {
+  color: #666 !important;
+  background-color: #fff !important;
+  border: 1px solid #666 !important;
+
+  &:hover,
+  &:focus {
+    color: #666 !important;
+    background-color: #eee !important;
+    border: 1px solid #999 !important;
+  }
+}
+
+
+.be-btn-dark {
+  color: #fff !important;
+  background-color: #000 !important;
+  border: 1px solid #000 !important;
+
+  &:hover,
+  &:focus {
+    color: #fff !important;
+    background-color: #333 !important;
+    border: 1px solid #333 !important;
+  }
+}
+
+.be-btn-outline-dark {
+  color: #000 !important;
+  background-color: #fff !important;
+  border: 1px solid #000 !important;
+
+  &:hover,
+  &:focus {
+    color: #fff !important;
+    background-color: #000 !important;
+    border: 1px solid #000 !important;
   }
 }
