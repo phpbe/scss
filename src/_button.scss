@@ -7,9 +7,9 @@
   border-radius: .25rem;
   text-align: center;
   vertical-align: middle;
-  color: #666;
-  background-color: #f1f1f1;
-  border: 1px solid #ccc;
+  color: $btn-color;
+  background-color: $btn-background-color;
+  border: 1px solid $btn-border-color;
   cursor: pointer;
   user-select: none;
   text-decoration: none;
@@ -17,9 +17,9 @@
 
   &:hover,
   &:focus {
-    color: #333;
-    background-color: #eee;
-    border: 1px solid #ccc;
+    color: $btn-hover-color;
+    background-color: $btn-hover-background-color;
+    border: 1px solid $btn-hover-border-color;
     text-decoration: none;
     outline: 0;
   }
@@ -45,46 +45,43 @@
   min-width: 6rem;
 }
 
-
 .be-btn-outline {
-  color: #666;
-  background-color: #f1f1f1;
-  border: 1px solid #ccc;
+  color: $btn-outline-color;
+  background-color: $btn-outline-background-color;
+  border: 1px solid $btn-outline-border-color;
 
   &:hover,
   &:focus {
-    color: #fff;
-    background-color: $theme-color;
-    border: 1px solid $theme-color;
+    color: $btn-color;
+    background-color: $btn-background-color;
+    border: 1px solid $btn-border-color;
   }
 }
 
-
-@each $name, $theme-color in $theme-colors {
+@each $name, $color in $colors {
   .be-btn-#{$name} {
     color: #fff;
-    background-color: $theme-color;
-    border: 1px solid $theme-color;
+    background-color: $color;
+    border: 1px solid $color;
 
     &:hover,
     &:focus {
       color: #fff;
-      background-color: mix(black, $theme-color, 20%);
-      border: 1px solid mix(black, $theme-color, 20%);
+      background-color: mix(black, $color, 20%);
+      border: 1px solid mix(black, $color, 20%);
     }
   }
 
   .be-btn-outline-#{$name} {
-    color: $theme-color;
+    color: $color;
     background-color: #fff;
-    border: 1px solid $theme-color;
+    border: 1px solid $color;
 
     &:hover,
     &:focus {
       color: #fff;
-      background-color: $theme-color;
-      border: 1px solid $theme-color;
+      background-color: $color;
+      border: 1px solid $color;
     }
   }
-
 }
