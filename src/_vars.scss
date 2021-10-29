@@ -45,21 +45,6 @@ $colors: (
         "cyan":       $cyan,
 ) !default;
 
-$primary:       #000 !default;
-$secondary:     #666 !default;
-$success:       $green !default;
-$danger:        $red !default;
-$warning:       $orange !default;
-$info:          $cyan !default;
-$theme-colors: (
-        "primary":    $primary,
-        "secondary":  $secondary,
-        "success":    $success,
-        "danger":     $danger,
-        "warning":    $warning,
-        "info":       $info,
-) !default;
-
 
 $font-sizes: (
         50: .5rem,
