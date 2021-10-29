@@ -46,15 +46,15 @@
 }
 
 .be-btn-outline {
-  color: $btn-outline-color;
-  background-color: $btn-outline-background-color;
-  border: 1px solid $btn-outline-border-color;
+  color: $btn-outline-color !important;
+  background-color: $btn-outline-background-color !important;
+  border: 1px solid $btn-outline-border-color !important;
 
   &:hover,
   &:focus {
-    color: $btn-color;
-    background-color: $btn-background-color;
-    border: 1px solid $btn-border-color;
+    color: $btn-color !important;
+    background-color: $btn-background-color !important;
+    border: 1px solid $btn-border-color !important;
   }
 }
 
