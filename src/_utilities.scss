@@ -36,6 +36,21 @@
   }
 }
 
+@each $breakpoint, $min in $breakpoints {
+  @if $min != 0 {
+    @media (min-width: $min) {
+      @each $name, $display in (
+              none: none,
+              block: block
+      ) {
+        .be-d-#{$breakpoint}-#{$name} {
+          display: $display;
+        }
+      }
+    }
+  }
+}
+
 .be-flex-0 {
   flex: 0 0 auto;
 }

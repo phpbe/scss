@@ -447,12 +447,46 @@
         <h2 class="be-h2 be-pb-50 be-mt-400 be-mb-100">显示方式（display）</h2>
         <div id="demo-display">
             <p>
-                <strong>命名规则：</strong>be-d-后缀值<br>
+                <strong>命名规则：</strong>be-d-后缀值，be-d-屏幕级别-后缀值<br>
                 <strong>后缀值：</strong>常用显示方式<br/>
                 <strong>后缀值列表：</strong>none, inline，block, inline-block, flex
             </p>
 
             <pre>&lt;div class="be-d-flex"&gt;...&lt;/div&gt;</pre>
+
+            <h4 class="be-h4 be-mb-100">屏幕选择</h4>
+            <p>
+                <strong>命名规则：</strong>be-d-屏幕级别-后缀值<br>
+                <strong>屏幕级别：</strong>sm, md, lg, xl, xxl<br/>
+                <strong>后缀值：</strong>none, block
+            </p>
+
+            <div class="be-d-block be-d-md-none be-mb-100">
+                <div class="demo-box be-c-green">
+                    be-d-block be-d-md-none 手机可见，桌面级别屏幕不可见
+                </div>
+            </div>
+
+            <div class="be-d-none be-d-md-block be-mb-100">
+                <div class="demo-box be-c-red">
+                    be-d-none be-d-md-block 桌面级别屏幕可见，手机不可见
+                </div>
+            </div>
+
+            
+            <h4 class="be-h4 be-mb-100">be-d-flex子项</h4>
+            <div class="be-d-flex be-mb-100">
+                <div class="be-flex-0">
+                    <div class="demo-box">
+                        be-flex-0
+                    </div>
+                </div>
+                <div class="be-flex-0">
+                    <div class="demo-box">
+                        be-flex-0
+                    </div>
+                </div>
+            </div>
 
             <div class="be-d-flex be-mb-100">
                 <div class="be-flex-1">
@@ -473,9 +507,9 @@
                         be-flex-0
                     </div>
                 </div>
-                <div class="be-flex-0">
+                <div class="be-flex-1">
                     <div class="demo-box">
-                        be-flex-0
+                        be-flex-1
                     </div>
                 </div>
             </div>
