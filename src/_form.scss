@@ -3,7 +3,7 @@
 
   position: relative;
 
-  > label {
+  > .be-floating-label {
     position: absolute;
     top: 0;
     left: 0;
@@ -24,7 +24,7 @@
 
   > .be-select {
     padding: 1.4rem .75rem 0.1rem .75rem;
-    ~ label {
+    ~ .be-floating-label {
       opacity: .65;
       transform: scale(.85) translateY(-.5rem) translateX(.15rem);
     }
@@ -44,7 +44,7 @@
   > .be-textarea:not(:placeholder-shown),
   > .be-textarea:-webkit-autofill {
     padding: 1.4rem .75rem 0.1rem .75rem;
-    ~ label {
+    ~ .be-floating-label {
       opacity: .65;
       transform: scale(.85) translateY(-.5rem) translateX(.15rem);
     }
