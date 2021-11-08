@@ -595,7 +595,13 @@
         <div class="demo-box be-fw-bolder be-mb-100">be-fw-bolder</div>
         <div class="demo-box be-fw-light be-mb-100">be-fw-light</div>
         <div class="demo-box be-fw-lighter be-mb-100">be-fw-lighter</div>
-
+        <script>
+            var arr = ['100','200','300','400','500','600','700','800','900'];
+            var len = arr.length;
+            for(var i = 0; i < len; i++) {
+                document.write('<div class="demo-box be-fw-'+arr[i]+' be-mb-100">be-fw-'+arr[i]+'</div>');
+            }
+        </script>
 
         <h2 class="be-h2 be-pb-50 be-mt-400 be-mb-100">行高（line-height）</h2>
         <p>
