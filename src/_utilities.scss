@@ -1,4 +1,26 @@
 
+// ===================================================================================================================== 边框
+.be-b {
+  border: $border-color 1px solid;
+}
+
+.be-bl {
+  border-left: $border-color 1px solid;
+}
+
+.be-br {
+  border-right: $border-color 1px solid;
+}
+
+.be-bt {
+  border-top: $border-color 1px solid;
+}
+
+.be-bb {
+  border-bottom: $border-color 1px solid;
+}
+
+
 
 // ===================================================================================================================== 颜色
 .be-c-dark,
