@@ -23,14 +23,23 @@
 
 
 // ===================================================================================================================== 颜色
-.be-c-dark,
+.be-c-black,
 .be-c-000 {
   color: #000;
+}
+
+.be-bc-black,
+.be-bc-000 {
+  background-color: #000;
 }
 
 @each $name in (111,222,333,444,555,666,777,888,999,aaa,bbb,ccc,ddd,eee) {
   .be-c-#{$name} {
     color: unquote("#" + $name);
+  }
+
+  .be-bc-#{$name} {
+    background-color: unquote("#" + $name);
   }
 }
 
@@ -39,9 +48,19 @@
   color: #fff;
 }
 
+.be-bc-white,
+.be-bc-fff {
+  background-color: #fff;
+}
+
+
 @each $name, $color in $colors {
   .be-c-#{$name} {
     color: $color;
+  }
+
+  .be-bc-#{$name} {
+    background-color: $color;
   }
 }
 

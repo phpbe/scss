@@ -171,7 +171,7 @@
             <div class="be-mb-100">
                 <input type="button" class="be-mt-50 be-btn be-btn" value="be-btn">
                 <script>
-                    var arr = ["blue","green","red","orange","gray","dark"];
+                    var arr = ["blue","green","red","orange","gray","black"];
                     var len = arr.length;
                     for(var i = 0; i < len; i++) {
                         document.write('<input type="button" class="be-mt-50 be-btn be-btn-'+arr[i]+'" value="be-btn be-btn-'+arr[i]+'">&nbsp;');
@@ -182,7 +182,7 @@
             <div class="be-mb-100">
                 <input type="button" class="be-mt-50 be-btn be-btn" value="be-btn" disabled>
                 <script>
-                    var arr = ["blue","green","red","orange","gray","dark"];
+                    var arr = ["blue","green","red","orange","gray","black"];
                     var len = arr.length;
                     for(var i = 0; i < len; i++) {
                         document.write('<input type="button" class="be-mt-50 be-btn be-btn-'+arr[i]+'" value="be-btn be-btn-'+arr[i]+'" disabled>&nbsp;');
@@ -194,7 +194,7 @@
 
                 <input type="button" class="be-mt-50 be-btn be-btn-outline" value="be-btn be-btn-outline">
                   <script>
-                      var arr = ["blue","green","red","orange","gray","dark"];
+                      var arr = ["blue","green","red","orange","gray","black"];
                     var len = arr.length;
                     for(var i = 0; i < len; i++) {
                         document.write('<input type="button" class="be-mt-50 be-btn be-btn-outline-'+arr[i]+'" value="be-btn be-btn-outline-'+arr[i]+'">&nbsp;');
@@ -205,7 +205,7 @@
             <div class="be-mb-100">
                 <input type="button" class="be-mt-50 be-btn be-btn-outline" value="be-btn be-btn-outline" disabled>
                 <script>
-                    var arr = ["blue","green","red","orange","gray","dark"];
+                    var arr = ["blue","green","red","orange","gray","black"];
                     var len = arr.length;
                     for(var i = 0; i < len; i++) {
                         document.write('<input type="button" class="be-mt-50 be-btn be-btn-outline-'+arr[i]+'" value="be-btn be-btn-outline-'+arr[i]+'" disabled>&nbsp;');
@@ -435,33 +435,66 @@
             <strong>be-bb：</strong>下边框，border-bottom: #eee 1px solid
         </div>
 
-        <h2 class="be-h2 be-pb-50 be-mt-400 be-mb-100">颜色（color）</h2>
-        <div id="demo-color">
-            <p>
-                <strong>命名规则：</strong>be-c-后缀值<br>
-                <strong>后缀值：</strong>常用颜色<br/>
-            </p>
-            <div class="be-c-000 be-p-20">be-c-000 或 be-c-dark</div>
+        <div class="be-row">
+            <div class="be-col-24 be-col-xl-11">
+                <h2 class="be-h2 be-pb-50 be-mt-400 be-mb-100">背景颜色（background-color）</h2>
+                <div id="demo-background-color">
+                    <p>
+                        <strong>命名规则：</strong>be-bc-后缀值<br>
+                        <strong>后缀值：</strong>常用颜色<br/>
+                    </p>
+                    <div class="be-bc-000 be-c-fff be-p-20">be-bc-000 或 be-bc-black</div>
 
-            <script>
-                var arr = ['111','222','333','444','555','666','777','888','999','aaa','bbb','ccc','ddd','eee'];
-                var len = arr.length;
-                for(var i = 0; i < len; i++) {
-                    document.write('<div class="be-c-'+arr[i]+' be-p-20">be-c-'+arr[i]+'</div>');
-                }
-            </script>
+                    <script>
+                        var arr = ['111','222','333','444','555','666','777','888','999','aaa','bbb','ccc','ddd','eee'];
+                        var len = arr.length;
+                        for(var i = 0; i < len; i++) {
+                            document.write('<div class="be-bc-' + arr[i] + (i < 8?' be-c-fff':'') + ' be-p-20">be-bc-'+arr[i]+'</div>');
+                        }
+                    </script>
 
-            <div class="be-c-fff be-p-20" style="background-color: #bbb;">be-c-fff 或 be-c-white</div>
+                    <div class="be-bc-fff be-p-20">be-bc-fff 或 be-bc-white</div>
 
-            <script>
-                var arr = ["blue","green","red","orange"];
-                var len = arr.length;
-                for(var i = 0; i < len; i++) {
-                    document.write('<div class="be-c-'+arr[i]+' be-p-20">be-c-'+arr[i]+'</div>');
-                }
-            </script>
+                    <script>
+                        var arr = ["blue","green","red","orange"];
+                        var len = arr.length;
+                        for(var i = 0; i < len; i++) {
+                            document.write('<div class="be-bc-'+arr[i]+' be-c-fff be-p-20">be-bc-'+arr[i]+'</div>');
+                        }
+                    </script>
+                </div>
+            </div>
+            <div class="be-col-0 be-col-xl-2">
+            </div>
+            <div class="be-col-24 be-col-xl-11">
+                <h2 class="be-h2 be-pb-50 be-mt-400 be-mb-100">颜色（color）</h2>
+                <div id="demo-color">
+                    <p>
+                        <strong>命名规则：</strong>be-c-后缀值<br>
+                        <strong>后缀值：</strong>常用颜色<br/>
+                    </p>
+                    <div class="be-c-000 be-p-20">be-c-000 或 be-c-black</div>
+
+                    <script>
+                        var arr = ['111','222','333','444','555','666','777','888','999','aaa','bbb','ccc','ddd','eee'];
+                        var len = arr.length;
+                        for(var i = 0; i < len; i++) {
+                            document.write('<div class="be-c-'+arr[i]+' be-p-20">be-c-'+arr[i]+'</div>');
+                        }
+                    </script>
+
+                    <div class="be-c-fff be-p-20" style="background-color: #bbb;">be-c-fff 或 be-c-white</div>
+
+                    <script>
+                        var arr = ["blue","green","red","orange"];
+                        var len = arr.length;
+                        for(var i = 0; i < len; i++) {
+                            document.write('<div class="be-c-'+arr[i]+' be-p-20">be-c-'+arr[i]+'</div>');
+                        }
+                    </script>
+                </div>
+            </div>
         </div>
-
 
 
         <h2 class="be-h2 be-pb-50 be-mt-400 be-mb-100">显示方式（display）</h2>
