@@ -1,39 +1,30 @@
 
 // ===================================================================================================================== 边框
-.be-b {
-  border: $border-color 1px solid;
-}
+@each $name in (000,111,222,333,444,555,666,777,888,999,aaa,bbb,ccc,ddd,eee) {
+  .be-b-#{$name} {
+    border: unquote("#" + $name) 1px solid;
+  }
 
-.be-bl {
-  border-left: $border-color 1px solid;
-}
+  .be-bl-#{$name} {
+    border-left: unquote("#" + $name) 1px solid;
+  }
 
-.be-br {
-  border-right: $border-color 1px solid;
-}
+  .be-br-#{$name} {
+    border-right: unquote("#" + $name) 1px solid;
+  }
 
-.be-bt {
-  border-top: $border-color 1px solid;
-}
+  .be-bt-#{$name} {
+    border-top: unquote("#" + $name) 1px solid;
+  }
 
-.be-bb {
-  border-bottom: $border-color 1px solid;
+  .be-bt-#{$name} {
+    border-bottom: unquote("#" + $name) 1px solid;
+  }
 }
-
 
 
 // ===================================================================================================================== 颜色
-.be-c-black,
-.be-c-000 {
-  color: #000;
-}
-
-.be-bc-black,
-.be-bc-000 {
-  background-color: #000;
-}
-
-@each $name in (111,222,333,444,555,666,777,888,999,aaa,bbb,ccc,ddd,eee) {
+@each $name in (000,111,222,333,444,555,666,777,888,999,aaa,bbb,ccc,ddd,eee,fff) {
   .be-c-#{$name} {
     color: unquote("#" + $name);
   }
@@ -42,17 +33,6 @@
     background-color: unquote("#" + $name);
   }
 }
-
-.be-c-white,
-.be-c-fff {
-  color: #fff;
-}
-
-.be-bc-white,
-.be-bc-fff {
-  background-color: #fff;
-}
-
 
 @each $name, $color in $colors {
   .be-c-#{$name} {

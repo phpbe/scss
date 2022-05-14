@@ -210,7 +210,7 @@
             <div class="be-mb-100">
                 <input type="button" class="be-mt-50 be-btn be-btn" value="be-btn">
                 <script>
-                    var arr = ["blue","green","red","orange","gray","black"];
+                    var arr = ["blue","green","red","orange","gray","black","primary","success","warning","danger","info"];
                     var len = arr.length;
                     for(var i = 0; i < len; i++) {
                         document.write('<input type="button" class="be-mt-50 be-btn be-btn-'+arr[i]+'" value="be-btn be-btn-'+arr[i]+'">&nbsp;');
@@ -221,7 +221,7 @@
             <div class="be-mb-100">
                 <input type="button" class="be-mt-50 be-btn be-btn" value="be-btn" disabled>
                 <script>
-                    var arr = ["blue","green","red","orange","gray","black"];
+                    var arr = ["blue","green","red","orange","gray","black","primary","success","warning","danger","info"];
                     var len = arr.length;
                     for(var i = 0; i < len; i++) {
                         document.write('<input type="button" class="be-mt-50 be-btn be-btn-'+arr[i]+'" value="be-btn be-btn-'+arr[i]+'" disabled>&nbsp;');
@@ -458,20 +458,20 @@
 
         <h2 class="be-h2 be-pb-50 be-mt-400 be-mb-100">边框（border）</h2>
 
-        <div class="be-b be-mb-100 be-p-50">
-            <strong>be-b：</strong>四边框，border: #eee 1px solid
+        <div class="be-b-ccc be-mb-100 be-p-50">
+            <strong>be-b-ccc：</strong>四边框，border: #ccc 1px solid
         </div>
-        <div class="be-bl be-mb-100 be-p-50">
-            <strong>be-bl：</strong>左边框，border-left: #eee 1px solid
+        <div class="be-bl-ccc be-mb-100 be-p-50">
+            <strong>be-bl-ccc：</strong>左边框，border-left: #ccc 1px solid
         </div>
-        <div class="be-br be-mb-100 be-p-50">
-            <strong>be-br：</strong>右边框，border-right: #eee 1px solid
+        <div class="be-br-ccc be-mb-100 be-p-50">
+            <strong>be-br-ccc：</strong>右边框，border-right: #ccc 1px solid
         </div>
-        <div class="be-bt be-mb-100 be-p-50">
-            <strong>be-bt：</strong>上边框，border-top: #eee 1px solid
+        <div class="be-bt-ccc be-mb-100 be-p-50">
+            <strong>be-bt-ccc：</strong>上边框，border-top: #ccc 1px solid
         </div>
-        <div class="be-bb be-mb-100 be-p-50">
-            <strong>be-bb：</strong>下边框，border-bottom: #eee 1px solid
+        <div class="be-bb-ccc be-mb-100 be-p-50">
+            <strong>be-bb-ccc：</strong>下边框，border-bottom: #ccc 1px solid
         </div>
 
         <div class="be-row">
@@ -482,20 +482,16 @@
                         <strong>命名规则：</strong>be-bc-后缀值<br>
                         <strong>后缀值：</strong>常用颜色<br/>
                     </p>
-                    <div class="be-bc-000 be-c-fff be-p-20">be-bc-000 或 be-bc-black</div>
-
                     <script>
-                        var arr = ['111','222','333','444','555','666','777','888','999','aaa','bbb','ccc','ddd','eee'];
+                        var arr = ['000', '111','222','333','444','555','666','777','888','999','aaa','bbb','ccc','ddd','eee', 'fff'];
                         var len = arr.length;
                         for(var i = 0; i < len; i++) {
                             document.write('<div class="be-bc-' + arr[i] + (i < 8?' be-c-fff':'') + ' be-p-20">be-bc-'+arr[i]+'</div>');
                         }
                     </script>
 
-                    <div class="be-bc-fff be-p-20">be-bc-fff 或 be-bc-white</div>
-
                     <script>
-                        var arr = ["blue","green","red","orange"];
+                        var arr = ["blue","green","red","orange","primary","success","warning","danger","info"];
                         var len = arr.length;
                         for(var i = 0; i < len; i++) {
                             document.write('<div class="be-bc-'+arr[i]+' be-c-fff be-p-20">be-bc-'+arr[i]+'</div>');
@@ -512,20 +508,17 @@
                         <strong>命名规则：</strong>be-c-后缀值<br>
                         <strong>后缀值：</strong>常用颜色<br/>
                     </p>
-                    <div class="be-c-000 be-p-20">be-c-000 或 be-c-black</div>
 
                     <script>
-                        var arr = ['111','222','333','444','555','666','777','888','999','aaa','bbb','ccc','ddd','eee'];
+                        var arr = ['000', '111','222','333','444','555','666','777','888','999','aaa','bbb','ccc','ddd','eee','fff'];
                         var len = arr.length;
                         for(var i = 0; i < len; i++) {
                             document.write('<div class="be-c-'+arr[i]+' be-p-20">be-c-'+arr[i]+'</div>');
                         }
                     </script>
 
-                    <div class="be-c-fff be-p-20" style="background-color: #bbb;">be-c-fff 或 be-c-white</div>
-
                     <script>
-                        var arr = ["blue","green","red","orange"];
+                        var arr = ["blue","green","red","orange","primary","success","warning","danger","info"];
                         var len = arr.length;
                         for(var i = 0; i < len; i++) {
                             document.write('<div class="be-c-'+arr[i]+' be-p-20">be-c-'+arr[i]+'</div>');
@@ -639,7 +632,7 @@
         <p>
             <strong>命名规则：</strong>be-fs-后缀值<br>
             <strong>后缀值：</strong>rem(根元素的字体大小) &times; 100， 即10表示0.1rem，125表示1.25rem<br/>
-            <strong>后缀值列表：</strong>50, 60, 70, 75, 80, 90, 100, 125, 150, 175, 200, 250, 300, 400
+            <strong>后缀值列表：</strong>50, 60, 70, 75, 80, 90, 100, 110, 120, 125, 150, 175, 200, 250, 300, 400
         </p>
         <div class="demo-box be-fs-50 be-lh-50 be-mb-100">be-fs-50</div>
         <div class="demo-box be-fs-75 be-lh-75 be-mb-100">be-fs-75</div>
@@ -679,7 +672,7 @@
         <p>
             <strong>命名规则：</strong>be-lh-后缀值<br>
             <strong>后缀值：</strong>rem(根元素的字体大小) &times; 100， 即10表示0.1rem，125表示1.25rem<br/>
-            <strong>后缀值列表：</strong>50, 60, 70, 75, 80, 90, 100, 125, 150, 175, 200, 250, 300, 400
+            <strong>后缀值列表：</strong>50, 60, 70, 75, 80, 90, 100, 110, 120, 125, 150, 175, 200, 250, 300, 400
         </p>
         <div class="demo-box be-fs-100 be-lh-100 be-mb-100">be-lh-100</div>
         <div class="demo-box be-fs-150 be-lh-150 be-mb-100">be-lh-150</div>
@@ -692,7 +685,7 @@
         <div id="demo-spacings">
             <p>
                 <strong>后缀值：</strong>rem(根元素的字体大小) &times; 100， 即10表示0.1rem，125表示1.25rem<br/>
-                <strong>后缀值列表：</strong>10, 20, 25, 30, 40, 50, 60, 70, 75, 80, 90, 100, 125, 150, 175, 200, 250, 300, 400
+                <strong>后缀值列表：</strong>10, 20, 25, 30, 40, 50, 60, 70, 75, 80, 90, 100, 110, 120, 125, 150, 175, 200, 250, 300, 400
             </p>
 
             <h4 class="be-h4 be-mb-100">内边距（padding）</h4>
