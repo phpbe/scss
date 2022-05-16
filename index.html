@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Be Scss</title>
 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+
     <link rel="stylesheet" href="src/be.css">
 
     <style>
@@ -19,12 +25,6 @@
 
         h2 {
             border-bottom: #eee 1px solid;
-        }
-
-        pre {
-            border: #eee 1px solid;
-            background-color: #fafafa;
-            padding: 1rem;
         }
 
         .demo-box {
@@ -77,25 +77,25 @@
         <h2 class="be-h2 be-pb-50 be-mt-400">如何使用</h2>
 
         <h4 class="be-h4 be-mt-200">方式一：直接引入 be.css</h4>
-        <pre>&lt;link rel="stylesheet" href="https://scss.phpbe.com/be.css"&gt;</pre>
+        <pre><code>&lt;link rel="stylesheet" href="https://scss.phpbe.com/be.css"&gt;</code></pre>
         <p>直接引入的方式将使用默认的样多格式</p>
 
         <h4 class="be-h4 be-mt-200">方式二：引入 be/scss 库</h4>
         <p>BE框架的项目，be/scss 默认已经引入</p>
         <p>非BE框架的项目，使用 composer require be/scc 引入， 或在在项目 composer.json 中加入以下代码段后 执行 composer update</p>
-        <pre>
+        <pre><code>
             ...
             "require": {
                 "be/scss": "*"
             }
             ...
-        </pre>
+        </code></pre>
         <p>引入be/scss库后，在vendor/be/scss目录下，你可以跟据需要编辑配置文件：_vars.scss，重新编译生成 be.css，生成个性化的前端样式。</p>
 
 
 
         <h2 class="be-h2 be-pb-50 be-mt-400 be-mb-100">容器（container）</h2>
-        <pre>&lt;div class="be-container"&gt;...&lt;/div&gt;</pre>
+        <pre><code>&lt;div class="be-container"&gt;...&lt;/div&gt;</code></pre>
 
         <h2 class="be-h2 be-pb-50 be-mt-400 be-mb-100">栅格系统（grid）</h2>
         <div id="demo-grid">
@@ -565,7 +565,7 @@
                 <strong>后缀值列表：</strong>none, inline，block, inline-block, flex
             </p>
 
-            <pre>&lt;div class="be-d-flex"&gt;...&lt;/div&gt;</pre>
+            <pre><code>&lt;div class="be-d-flex"&gt;...&lt;/div&gt;</code></pre>
 
             <h4 class="be-h4 be-mb-100">屏幕选择</h4>
             <p>
