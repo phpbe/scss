@@ -1,6 +1,6 @@
 
 // ===================================================================================================================== 边框
-@each $name in (000,111,222,333,444,555,666,777,888,999,aaa,bbb,ccc,ddd,eee) {
+@each $name in ('000','111','222','333','444','555','666',777,888,999,aaa,bbb,ccc,ddd,eee) {
   .be-b-#{$name} {
     border: unquote("#" + $name) 1px solid;
   }
@@ -24,17 +24,8 @@
 
 
 // ===================================================================================================================== 颜色
-@each $name in (000,111,222,333,444,555,666,777,888,999,aaa,bbb,ccc,ddd,eee,fff) {
-  .be-c-#{$name} {
-    color: unquote("#" + $name);
-  }
 
-  .be-bc-#{$name} {
-    background-color: unquote("#" + $name);
-  }
-}
-
-@each $name, $color in $colors {
+@each $name, $color in map-merge(map-merge($gray-colors, $main-colors), $colors) {
   .be-c-#{$name} {
     color: $color;
   }
@@ -43,6 +34,7 @@
     background-color: $color;
   }
 }
+
 
 // ===================================================================================================================== 显示方式
 @each $name, $display in (

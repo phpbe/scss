@@ -92,6 +92,57 @@
         </code></pre>
         <p>引入be/scss库后，在vendor/be/scss目录下，你可以跟据需要编辑配置文件：_vars.scss，重新编译生成 be.css，生成个性化的前端样式。</p>
 
+        <script>
+            let arr,len ,i;
+        </script>
+
+        <h2 class="be-h2 be-pb-50 be-mt-400 be-mb-100">整体配色</h2>
+        <h4 class="be-h4 be-mt-200">灰度包系</h4>
+        <p class="be-mt-100 be-c-999">灰度包系包含从黑到白的过波色</p>
+        <script>
+            arr = ['000', '111','222','333','444','555','666','777','888','999','aaa','bbb','ccc','ddd','eee','fff'];
+            len = arr.length;
+            for(i = 0; i < len; i++) {
+                document.write('<div class="be-d-inline-block">');
+                document.write('<div class="be-p-50 be-ta-center">'+arr[i]+'</div>');
+                document.write('<div class="be-b-eee be-bc-' + arr[i] + ' be-px-200 be-py-50">&nbsp;</div>');
+                document.write('</div>');
+            }
+        </script>
+
+
+        <h4 class="be-h4 be-mt-200">主色 & 主色系</h4>
+        <p class="be-mt-100 be-c-999">主色用来规定网站的主色调，网站的内容应尽量限定使用主色系+灰度包系, 与大部分前端框架不同，主色从辅助色中独立出来，可实现改变网站配色时，不影响其它色系的使用。</p>
+        <script>
+            document.write('<div class="be-d-inline-block be-mr-200">');
+            document.write('<div class="be-p-50 be-ta-center">main</div>');
+            document.write('<div class="be-b-eee be-bc-main be-px-200 be-py-50">&nbsp;</div>');
+            document.write('</div>');
+
+            arr = ["main-1","main-2","main-3","main-4","main-5","main-6","main-7","main-8","main-9"];
+            len = arr.length;
+            for(i = 0; i < len; i++) {
+                document.write('<div class="be-d-inline-block">');
+                document.write('<div class="be-p-50 be-ta-center">'+arr[i]+'</div>');
+                document.write('<div class="be-b-eee be-bc-' + arr[i] + ' be-px-200 be-py-50">&nbsp;</div>');
+                document.write('</div>');
+            }
+        </script>
+
+
+        <h4 class="be-h4 be-mt-200">输助色</h4>
+        <p class="be-mt-100 be-c-999">输助色定义了常用的颜色</p>
+        <script>
+            arr = ["red","orange","yellow","green","blue","purple","pink","brown"];
+            len = arr.length;
+            for(i = 0; i < len; i++) {
+                document.write('<div class="be-d-inline-block">');
+                document.write('<div class="be-p-50 be-ta-center">'+arr[i]+'</div>');
+                document.write('<div class="be-b-eee be-bc-' + arr[i] + ' be-px-200 be-py-50">&nbsp;</div>');
+                document.write('</div>');
+            }
+        </script>
+
 
 
         <h2 class="be-h2 be-pb-50 be-mt-400 be-mb-100">容器（container）</h2>
@@ -232,65 +283,83 @@
         </div>
 
 
-        <h2 class="be-h2 be-pb-50 be-mt-400 be-mb-100">按钮（button）</h2>
-        <div id="demo-btn">
+        <h2 class="be-h2 be-pb-50 be-mt-400">按钮（button）</h2>
+        <div class="be-mt-100" id="demo-btn">
 
-            <div class="be-mb-100">
-                <input type="button" class="be-mt-50 be-btn be-btn" value="be-btn">
-                <script>
-                    var arr = ["blue","green","red","orange","gray","black","primary","success","warning","danger","info"];
-                    var len = arr.length;
-                    for(var i = 0; i < len; i++) {
-                        document.write('<input type="button" class="be-mt-50 be-btn be-btn-'+arr[i]+'" value="be-btn be-btn-'+arr[i]+'">&nbsp;');
-                    }
-                </script>
+            <p>
+                <strong>be-btn：</strong>默认按钮<br>
+                <strong>be-btn-*：</strong>指定色调<br>
+                <strong>be-btn-outline：</strong>外边框<br>
+                <strong>be-btn-plain：</strong>朴素风格, 仅主色+辅助色可用<br>
+                <strong>be-btn-round：</strong>圆角<br>
+                <strong>be-btn-sm/be-btn-lg：</strong>尺寸大小<br>
+            </p>
+            <p>以上类名组合使用</p>
+
+            <h4 class="be-h4">默认按钮</h4>
+            <div class="be-mt-100">
+                <input type="button" class="be-mt-50 be-btn" value="be-btn">&nbsp;
+                <input type="button" class="be-mt-50 be-btn be-btn-outline" value="be-btn be-btn-outline">&nbsp;
+                <input type="button" class="be-mt-50 be-btn be-btn-round" value="be-btn be-btn-round">&nbsp;
             </div>
 
-            <div class="be-mb-100">
-                <input type="button" class="be-mt-50 be-btn be-btn" value="be-btn" disabled>
-                <script>
-                    var arr = ["blue","green","red","orange","gray","black","primary","success","warning","danger","info"];
-                    var len = arr.length;
-                    for(var i = 0; i < len; i++) {
-                        document.write('<input type="button" class="be-mt-50 be-btn be-btn-'+arr[i]+'" value="be-btn be-btn-'+arr[i]+'" disabled>&nbsp;');
-                    }
-                </script>
+            <h4 class="be-h4 be-mt-200">黑色按钮</h4>
+            <div class="be-mt-100">
+                <input type="button" class="be-mt-50 be-btn be-btn-black" value="be-btn be-btn-black">&nbsp;
+                <input type="button" class="be-mt-50 be-btn be-btn-black be-btn-outline" value="be-btn be-btn-black be-btn-outline">&nbsp;
+                <input type="button" class="be-mt-50 be-btn be-btn-black be-btn-round" value="be-btn be-btn-black be-btn-round">&nbsp;
             </div>
 
-            <div class="be-mb-100">
-
-                <input type="button" class="be-mt-50 be-btn be-btn-outline" value="be-btn be-btn-outline">
-                  <script>
-                      var arr = ["blue","green","red","orange","gray","black"];
-                    var len = arr.length;
-                    for(var i = 0; i < len; i++) {
-                        document.write('<input type="button" class="be-mt-50 be-btn be-btn-outline-'+arr[i]+'" value="be-btn be-btn-outline-'+arr[i]+'">&nbsp;');
-                    }
-                </script>
+            <h4 class="be-h4 be-mt-200">灰色按钮</h4>
+            <div class="be-mt-100">
+                <input type="button" class="be-mt-50 be-btn be-btn-gray" value="be-btn be-btn-gray">&nbsp;
+                <input type="button" class="be-mt-50 be-btn be-btn-gray be-btn-outline" value="be-btn be-btn-gray be-btn-outline">&nbsp;
+                <input type="button" class="be-mt-50 be-btn be-btn-gray be-btn-round" value="be-btn be-btn-gray be-btn-round">&nbsp;
             </div>
 
-            <div class="be-mb-100">
-                <input type="button" class="be-mt-50 be-btn be-btn-outline" value="be-btn be-btn-outline" disabled>
-                <script>
-                    var arr = ["blue","green","red","orange","gray","black"];
-                    var len = arr.length;
-                    for(var i = 0; i < len; i++) {
-                        document.write('<input type="button" class="be-mt-50 be-btn be-btn-outline-'+arr[i]+'" value="be-btn be-btn-outline-'+arr[i]+'" disabled>&nbsp;');
-                    }
-                </script>
+            <h4 class="be-h4 be-mt-200">主色按钮</h4>
+            <div class="be-mt-100">
+                <input type="button" class="be-mt-50 be-btn be-btn-main" value="be-btn be-btn-main">&nbsp;
+                <input type="button" class="be-mt-50 be-btn be-btn-main be-btn-outline" value="be-btn be-btn-main be-btn-outline">&nbsp;
+                <input type="button" class="be-mt-50 be-btn be-btn-main be-btn-plain" value="be-btn be-btn-main be-btn-plain">&nbsp;
+                <input type="button" class="be-mt-50 be-btn be-btn-main be-btn-round" value="be-btn be-btn-main be-btn-round">&nbsp;
             </div>
 
-            <div class="be-mb-100">
-                <input type="button" class="be-mt-50 be-btn" value="be-btn">
-                <button class="be-mt-50 be-btn">be-btn（button）</button>
-                <a class="be-mt-50 be-btn" href="">be-btn（超链接）</a>
+            <h4 class="be-h4 be-mt-200">辅助色按钮</h4>
+            <script>
+                arr = ["red","orange","yellow","green","blue","purple","pink","brown"];
+                len = arr.length;
+                for(i = 0; i < len; i++) {
+                    document.write('<div class="be-mt-100">');
+                    document.write('<input type="button" class="be-mt-50 be-btn be-btn-' + arr[i] + '" value="be-btn be-btn-' + arr[i] + '">&nbsp;');
+                    document.write('<input type="button" class="be-mt-50 be-btn be-btn-' + arr[i] + ' be-btn-outline" value="be-btn be-btn-' + arr[i] + ' be-btn-outline">&nbsp;');
+                    document.write('<input type="button" class="be-mt-50 be-btn be-btn-' + arr[i] + ' be-btn-plain" value="be-btn be-btn-' + arr[i] + ' be-btn-plain">&nbsp;');
+                    document.write('<input type="button" class="be-mt-50 be-btn be-btn-' + arr[i] + ' be-btn-round" value="be-btn be-btn-' + arr[i] + ' be-btn-round">&nbsp;');
+                    document.write('</div>');
+                }
+            </script>
+
+            <h4 class="be-h4 be-mt-200">其它元素展示按钮外观</h4>
+            <div class="be-mt-100">
+                <button class="be-mt-50 be-btn be-btn-main">be-btn be-btn-main（button）</button>
+                <a class="be-mt-50 be-btn be-btn-main" href="">be-btn be-btn-main（超链接）</a>
             </div>
 
-            <div class="be-mb-100">
-                <input type="button" class="be-mt-50 be-btn be-btn-sm" value="be-btn be-btn-sm">
-                <input type="button" class="be-mt-50 be-btn be-btn-lg" value="be-btn be-btn-lg">
+            <h4 class="be-h4 be-mt-200">尺寸大小</h4>
+            <div class="be-mt-100">
+                <input type="button" class="be-mt-50 be-btn be-btn-main be-btn-sm" value="be-btn be-btn-main be-btn-sm">
+                <input type="button" class="be-mt-50 be-btn be-btn-main be-btn-lg" value="be-btn be-btn-main be-btn-lg">
             </div>
 
+            <h4 class="be-h4 be-mt-200">禁用</h4>
+            <div class="be-mt-100">
+                <input type="button" class="be-mt-50 be-btn be-btn-main" value="be-btn be-btn-main" disabled>
+            </div>
+
+            <h4 class="be-h4 be-mt-200">多项组合</h4>
+            <div class="be-mt-100">
+                <input type="button" class="be-mt-50 be-btn be-btn-purple be-btn-plain be-btn-round be-btn-lg" value="be-btn be-btn-purple be-btn-plain be-btn-round be-btn-lg">&nbsp;
+            </div>
         </div>
 
         <h2 class="be-h2 be-pb-50 be-mt-400 be-mb-100">表单（form）</h2>
@@ -430,7 +499,8 @@
                     <div class="be-col-8">
                     </div>
                     <div class="be-col-16">
-                        <input type="button" class="be-btn" value="提交">
+                        <input type="button" class="be-btn be-btn-main" value="提交">
+                        <input type="reset" class="be-btn" value="重置">
                     </div>
                 </div>
             </form>
@@ -461,7 +531,8 @@
                     <label class="be-floating-label">描述</label>
                 </div>
 
-                <input type="button" class="be-btn" value="提交">
+                <input type="button" class="be-btn be-btn-main" value="提交">
+                <input type="reset" class="be-btn" value="重置">
             </form>
         </div>
 
@@ -511,17 +582,25 @@
                         <strong>后缀值：</strong>常用颜色<br/>
                     </p>
                     <script>
-                        var arr = ['000', '111','222','333','444','555','666','777','888','999','aaa','bbb','ccc','ddd','eee', 'fff'];
-                        var len = arr.length;
-                        for(var i = 0; i < len; i++) {
+                        arr = ['000', '111','222','333','444','555','666','777','888','999','aaa','bbb','ccc','ddd','eee', 'fff'];
+                        len = arr.length;
+                        for(i = 0; i < len; i++) {
                             document.write('<div class="be-bc-' + arr[i] + (i < 8?' be-c-fff':'') + ' be-p-20">be-bc-'+arr[i]+'</div>');
                         }
                     </script>
 
                     <script>
-                        var arr = ["blue","green","red","orange","primary","success","warning","danger","info"];
-                        var len = arr.length;
-                        for(var i = 0; i < len; i++) {
+                        document.write('<div class="be-bc-main be-c-fff be-p-20">be-bc-main</div>');
+
+                        for(i = 1; i <= 9; i++) {
+                            document.write('<div class="be-bc-main-'+i+' be-c-fff be-p-20">be-bc-main-'+i+'</div>');
+                        }
+                    </script>
+
+                    <script>
+                        arr = ["red","orange","yellow","green","blue","purple","pink","brown"];
+                        len = arr.length;
+                        for(i = 0; i < len; i++) {
                             document.write('<div class="be-bc-'+arr[i]+' be-c-fff be-p-20">be-bc-'+arr[i]+'</div>');
                         }
                     </script>
@@ -538,17 +617,25 @@
                     </p>
 
                     <script>
-                        var arr = ['000', '111','222','333','444','555','666','777','888','999','aaa','bbb','ccc','ddd','eee','fff'];
-                        var len = arr.length;
-                        for(var i = 0; i < len; i++) {
-                            document.write('<div class="be-c-'+arr[i]+' be-p-20">be-c-'+arr[i]+'</div>');
+                        arr = ['000', '111','222','333','444','555','666','777','888','999','aaa','bbb','ccc','ddd','eee','fff'];
+                        len = arr.length;
+                        for(i = 0; i < len; i++) {
+                            document.write('<div class="be-c-'+arr[i] + ' be-p-20">be-c-'+arr[i]+'</div>');
                         }
                     </script>
 
                     <script>
-                        var arr = ["blue","green","red","orange","primary","success","warning","danger","info"];
-                        var len = arr.length;
-                        for(var i = 0; i < len; i++) {
+                        document.write('<div class="be-c-main be-p-20">be-c-main</div>');
+
+                        for(i = 1; i <= 9; i++) {
+                            document.write('<div class="be-c-main-'+i+' be-p-20">be-c-main-'+i+'</div>');
+                        }
+                    </script>
+
+                    <script>
+                        arr = ["red","orange","yellow","green","blue","purple","pink","brown"];
+                        len = arr.length;
+                        for(i = 0; i < len; i++) {
                             document.write('<div class="be-c-'+arr[i]+' be-p-20">be-c-'+arr[i]+'</div>');
                         }
                     </script>
@@ -689,9 +776,9 @@
         <div class="demo-box be-fw-light be-mb-100">be-fw-light</div>
         <div class="demo-box be-fw-lighter be-mb-100">be-fw-lighter</div>
         <script>
-            var arr = ['100','200','300','400','500','600','700','800','900'];
-            var len = arr.length;
-            for(var i = 0; i < len; i++) {
+            arr = ['100','200','300','400','500','600','700','800','900'];
+            len = arr.length;
+            for(i = 0; i < len; i++) {
                 document.write('<div class="demo-box be-fw-'+arr[i]+' be-mb-100">be-fw-'+arr[i]+'</div>');
             }
         </script>

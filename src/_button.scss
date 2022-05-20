@@ -18,9 +18,9 @@
 
   &:hover,
   &:focus {
-    color: $btn-hover-color;
-    background-color: $btn-hover-background-color;
-    border: 1px solid $btn-hover-border-color;
+    color: $mainColor;
+    background-color: $mainColor-9;
+    border: 1px solid $mainColor;
     text-decoration: none;
     outline: 0;
   }
@@ -31,6 +31,60 @@
     opacity: .65;
   }
 }
+
+.be-btn-outline {
+  background-color: #fff;
+
+  &:hover,
+  &:focus {
+    background-color: #fff;
+  }
+}
+
+@each $name, $color in map-merge(("black": $black, "gray": $gray, "main": $mainColor), $colors) {
+  .be-btn-#{$name} {
+    color: #fff !important;
+    background-color: $color !important;
+    border: 1px solid $color !important;
+
+    &:hover,
+    &:focus {
+      color: #fff !important;
+      background-color: mix(black, $color, 20%) !important;
+      border: 1px solid mix(black, $color, 20%) !important;
+    }
+  }
+
+  .be-btn-#{$name}.be-btn-outline {
+    color: $color !important;
+    background-color: #fff !important;
+    border: 1px solid $color !important;
+
+    &:hover,
+    &:focus {
+      color: #fff !important;
+      background-color: $color !important;
+      border: 1px solid $color !important;
+    }
+  }
+
+  .be-btn-#{$name}.be-btn-plain {
+    color: $color !important;
+    background-color: mix(white, $color, 90%) !important;
+    border: 1px solid $color !important;
+
+    &:hover,
+    &:focus {
+      color: #fff !important;
+      background-color: $color !important;
+      border: 1px solid $color !important;
+    }
+  }
+
+}
+
+
+
 
 .be-btn-sm {
   font-size: 0.875rem;
@@ -46,96 +100,17 @@
   min-width: 6rem;
 }
 
-.be-btn-outline {
-  color: $btn-outline-color !important;
-  background-color: $btn-outline-background-color !important;
-  border: 1px solid $btn-outline-border-color !important;
-
-  &:hover,
-  &:focus {
-    color: $btn-color !important;
-    background-color: $btn-background-color !important;
-    border: 1px solid $btn-border-color !important;
-  }
+.be-btn.be-btn-round {
+  border-radius: 2rem;
+  padding: .375rem 1.5rem;
 }
 
-@each $name, $color in $colors {
-  .be-btn-#{$name} {
-    color: #fff !important;
-    background-color: $color !important;
-    border: 1px solid $color !important;
-
-    &:hover,
-    &:focus {
-      color: #fff !important;
-      background-color: mix(black, $color, 20%) !important;
-      border: 1px solid mix(black, $color, 20%) !important;
-    }
-  }
-
-  .be-btn-outline-#{$name} {
-    color: $color !important;
-    background-color: #fff !important;
-    border: 1px solid $color !important;
-
-    &:hover,
-    &:focus {
-      color: #fff !important;
-      background-color: $color !important;
-      border: 1px solid $color !important;
-    }
-  }
+.be-btn-sm.be-btn-round {
+  border-radius: 1.5rem;
+  padding: .25rem 1rem;
 }
 
-.be-btn-gray {
-  color: #666 !important;
-  background-color: #eee !important;
-  border: 1px solid #999 !important;
-
-  &:hover,
-  &:focus {
-    color: #333 !important;
-    background-color: #ccc !important;
-    border: 1px solid #999 !important;
-  }
-}
-
-.be-btn-outline-gray {
-  color: #666 !important;
-  background-color: #fff !important;
-  border: 1px solid #666 !important;
-
-  &:hover,
-  &:focus {
-    color: #666 !important;
-    background-color: #eee !important;
-    border: 1px solid #999 !important;
-  }
-}
-
-
-.be-btn-black {
-  color: #fff !important;
-  background-color: #000 !important;
-  border: 1px solid #000 !important;
-
-  &:hover,
-  &:focus {
-    color: #fff !important;
-    background-color: #333 !important;
-    border: 1px solid #333 !important;
-  }
-}
-
-.be-btn-outline-black {
-  color: #000 !important;
-  background-color: #fff !important;
-  border: 1px solid #000 !important;
-
-  &:hover,
-  &:focus {
-    color: #fff !important;
-    background-color: #000 !important;
-    border: 1px solid #000 !important;
-  }
+.be-btn-lg.be-btn-round {
+  border-radius: 2.5rem;
+  padding: 0.5rem 2rem;
 }

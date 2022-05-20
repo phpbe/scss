@@ -19,44 +19,83 @@ $container-max-widths: (
 $grid-columns: 24 !default;
 
 
-// 按钮样式
-$btn-color: #fff !default;
-$btn-background-color: #333 !default;
-$btn-border-color: #333 !default;
+$black: #333 !default;
+$gray: #999 !default;
+$white: #fff !default;
 
-// 按钮悬停样式
-$btn-hover-color: #fff !default;
-$btn-hover-background-color: mix(black, $btn-background-color, 20%) !default;
-$btn-hover-border-color: mix(black, $btn-border-color, 20%) !default;
+$gray-colors: (
+        "000": #000,
+        "111": #111,
+        "222": #222,
+        "333": #333,
+        "444": #444,
+        "555": #555,
+        "666": #666,
+        "777": #777,
+        "888": #888,
+        "999": #999,
+        "aaa": #aaa,
+        "bbb": #bbb,
+        "ccc": #ccc,
+        "ddd": #ddd,
+        "eee": #eee,
+        "fff": #fff,
+) !default;
 
-$btn-outline-color: #666 !default;
-$btn-outline-background-color: #fff !default;
-$btn-outline-border-color: #ccc !default;
+// 主色
+$mainColor: #409EFF !default;
+$mainColor-1: mix(white, $mainColor, 10%) !default;
+$mainColor-2: mix(white, $mainColor, 20%) !default;
+$mainColor-3: mix(white, $mainColor, 30%) !default;
+$mainColor-4: mix(white, $mainColor, 40%) !default;
+$mainColor-5: mix(white, $mainColor, 50%) !default;
+$mainColor-6: mix(white, $mainColor, 60%) !default;
+$mainColor-7: mix(white, $mainColor, 70%) !default;
+$mainColor-8: mix(white, $mainColor, 80%) !default;
+$mainColor-9: mix(white, $mainColor, 90%) !default;
+$main-colors: (
+        "main": $mainColor,
+        "main-1": $mainColor-1,
+        "main-2": $mainColor-2,
+        "main-3": $mainColor-3,
+        "main-4": $mainColor-4,
+        "main-5": $mainColor-5,
+        "main-6": $mainColor-6,
+        "main-7": $mainColor-7,
+        "main-8": $mainColor-8,
+        "main-9": $mainColor-9,
+) !default;
+
+
+$red: #F56C6C !default;
+$orange: #f90 !default;
+$yellow: #fe3 !default;
+$green: #67C23A!default;
+$blue: #409EFF !default;
+$purple: #7952b3 !default;
+$pink: #cc6699 !default;
+$brown: #b75555 !default;
+$colors: (
+        "red": $red,
+        "orange": $orange,
+        "yellow": $yellow,
+        "green": $green,
+        "blue": $blue,
+        "purple": $purple,
+        "pink": $pink,
+        "brown": $brown,
+) !default;
+
+
+// 默认按钮样式
+$btn-color: #666 !default;
+$btn-background-color: #fff !default;
+$btn-border-color: #ccc !default;
+
 
 // 理入框
 $input-border-color: #ccc !default;
-$input-focus-border-color: #666 !default;
-
-$blue: blue !default;
-$green: green !default;
-$red: red !default;
-$orange: orange !default;
-$primary: #409EFF !default;
-$success: #67C23A !default;
-$warning: #E6A23C !default;
-$danger: #F56C6C !default;
-$info: #909399 !default;
-$colors: (
-        "blue": $blue,
-        "green": $green,
-        "red": $red,
-        "orange": $orange,
-        "primary": $primary,
-        "success": $success,
-        "warning": $warning,
-        "danger": $danger,
-        "info": $info,
-) !default;
+$input-focus-border-color: $mainColor !default;
 
 
 $font-sizes: (
