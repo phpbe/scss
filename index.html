@@ -290,48 +290,48 @@
                 <strong>be-btn：</strong>基本样式 - 默认按钮<br>
                 <strong>be-btn-[颜色]：</strong>指定颜色的按钮<br>
                 <strong>be-btn-plain：</strong>颜色二次处理 - 朴素风格,<br>
-                <strong>be-btn-fade：</strong>颜色二次处理 - 褪色，鼠标悬停时恢复全色<br>
-                <strong>be-btn-outline：</strong>控制外观 - 外边框<br>
-                <strong>be-btn-round：</strong>控制外观 - 圆角<br>
-                <strong>be-btn-sm/be-btn-lg：</strong>控制外观 - 尺寸大小<br>
+                <strong>be-btn-fade：</strong>颜色二次处理 - 褪色，鼠标悬停时恢复原色<br>
+                <strong>be-btn-outline：</strong>修饰外观 - 外边框<br>
+                <strong>be-btn-round：</strong>修饰外观 - 圆角<br>
+                <strong>be-btn-sm/be-btn-lg：</strong>修饰外观 - 尺寸大小<br>
             </p>
 
-            <h4 class="be-h4">编写顺序：基本样式 + 颜色/颜色二次处理 + 控制外观</h4>
+            <h4 class="be-h4">编写顺序：基本样式 + 颜色/颜色二次处理 + 修饰外观</h4>
             <p>be-btn 为按钮基本样式，需放在最前</p>
-            <p>be-btn-[颜色] 放在中间</p>
-            <p>be-btn-fade/be-btn-plain 颜色二次处理，须放在 be-btn-[颜色] 之后</p>
-            <p>be-btn-outline/be-btn-round/be-btn-sm/be-btn-lg 控制外观，放在最后</p>
+            <p>be-btn-[颜色] 放在 be-btn 之后</p>
+            <p>be-btn-fade/be-btn-plain 颜色二次处理，放在 be-btn-[颜色] 之后</p>
+            <p>be-btn-outline/be-btn-round/be-btn-sm/be-btn-lg 修饰外观，放在最后</p>
 
             <h4 class="be-h4">默认按钮</h4>
             <p>默认按钮悬停颜色为主色</p>
             <div class="be-mt-100">
                 <input type="button" class="be-mt-50 be-btn" value="be-btn">&nbsp;
-                <input type="button" class="be-mt-50 be-btn be-btn-outline" value="be-btn be-btn-outline">&nbsp;
                 <input type="button" class="be-mt-50 be-btn be-btn-plain" value="be-btn be-btn-plain">&nbsp;
+                <input type="button" class="be-mt-50 be-btn be-btn-outline" value="be-btn be-btn-outline">&nbsp;
                 <input type="button" class="be-mt-50 be-btn be-btn-round" value="be-btn be-btn-round">&nbsp;
             </div>
 
             <h4 class="be-h4 be-mt-200">黑色按钮</h4>
             <div class="be-mt-100">
                 <input type="button" class="be-mt-50 be-btn be-btn-black" value="be-btn be-btn-black">&nbsp;
-                <input type="button" class="be-mt-50 be-btn be-btn-black be-btn-outline" value="be-btn be-btn-black be-btn-outline">&nbsp;
                 <input type="button" class="be-mt-50 be-btn be-btn-black be-btn-plain" value="be-btn be-btn-black be-btn-plain">&nbsp;
+                <input type="button" class="be-mt-50 be-btn be-btn-black be-btn-outline" value="be-btn be-btn-black be-btn-outline">&nbsp;
                 <input type="button" class="be-mt-50 be-btn be-btn-black be-btn-round" value="be-btn be-btn-black be-btn-round">&nbsp;
             </div>
 
             <h4 class="be-h4 be-mt-200">灰色按钮</h4>
             <div class="be-mt-100">
                 <input type="button" class="be-mt-50 be-btn be-btn-gray" value="be-btn be-btn-gray">&nbsp;
-                <input type="button" class="be-mt-50 be-btn be-btn-gray be-btn-outline" value="be-btn be-btn-gray be-btn-outline">&nbsp;
                 <input type="button" class="be-mt-50 be-btn be-btn-gray be-btn-plain" value="be-btn be-btn-gray be-btn-plain">&nbsp;
+                <input type="button" class="be-mt-50 be-btn be-btn-gray be-btn-outline" value="be-btn be-btn-gray be-btn-outline">&nbsp;
                 <input type="button" class="be-mt-50 be-btn be-btn-gray be-btn-round" value="be-btn be-btn-gray be-btn-round">&nbsp;
             </div>
 
             <h4 class="be-h4 be-mt-200">主色按钮</h4>
             <div class="be-mt-100">
                 <input type="button" class="be-mt-50 be-btn be-btn-main" value="be-btn be-btn-main">&nbsp;
-                <input type="button" class="be-mt-50 be-btn be-btn-main be-btn-outline" value="be-btn be-btn-main be-btn-outline">&nbsp;
                 <input type="button" class="be-mt-50 be-btn be-btn-main be-btn-plain" value="be-btn be-btn-main be-btn-plain">&nbsp;
+                <input type="button" class="be-mt-50 be-btn be-btn-main be-btn-outline" value="be-btn be-btn-main be-btn-outline">&nbsp;
                 <input type="button" class="be-mt-50 be-btn be-btn-main be-btn-round" value="be-btn be-btn-main be-btn-round">&nbsp;
             </div>
 
@@ -342,8 +342,8 @@
                 for(i = 0; i < len; i++) {
                     document.write('<div class="be-mt-100">');
                     document.write('<input type="button" class="be-mt-50 be-btn be-btn-' + arr[i] + '" value="be-btn be-btn-' + arr[i] + '">&nbsp;');
-                    document.write('<input type="button" class="be-mt-50 be-btn be-btn-' + arr[i] + ' be-btn-outline" value="be-btn be-btn-' + arr[i] + ' be-btn-outline">&nbsp;');
                     document.write('<input type="button" class="be-mt-50 be-btn be-btn-' + arr[i] + ' be-btn-plain" value="be-btn be-btn-' + arr[i] + ' be-btn-plain">&nbsp;');
+                    document.write('<input type="button" class="be-mt-50 be-btn be-btn-' + arr[i] + ' be-btn-outline" value="be-btn be-btn-' + arr[i] + ' be-btn-outline">&nbsp;');
                     document.write('<input type="button" class="be-mt-50 be-btn be-btn-' + arr[i] + ' be-btn-round" value="be-btn be-btn-' + arr[i] + ' be-btn-round">&nbsp;');
                     document.write('</div>');
                 }
@@ -353,14 +353,14 @@
 
             <div class="be-mt-100">
                 <input type="button" class="be-mt-50 be-btn be-btn-red be-btn-fade" value="be-btn be-btn-red be-btn-fade">&nbsp;
-                <input type="button" class="be-mt-50 be-btn be-btn-red be-btn-fade be-btn-outline" value="be-btn be-btn-red be-btn-fade be-btn-outline">&nbsp;
                 <input type="button" class="be-mt-50 be-btn be-btn-red be-btn-fade be-btn-plain" value="be-btn be-btn-red be-btn-fade be-btn-plain">&nbsp;
+                <input type="button" class="be-mt-50 be-btn be-btn-red be-btn-fade be-btn-outline" value="be-btn be-btn-red be-btn-fade be-btn-outline">&nbsp;
             </div>
 
             <div class="be-mt-100">
                 <input type="button" class="be-mt-50 be-btn be-btn-green be-btn-fade" value="be-btn be-btn-green be-btn-fade">&nbsp;
-                <input type="button" class="be-mt-50 be-btn be-btn-green be-btn-fade be-btn-outline" value="be-btn be-btn-green be-btn-fade be-btn-outline">&nbsp;
                 <input type="button" class="be-mt-50 be-btn be-btn-green be-btn-fade be-btn-plain" value="be-btn be-btn-green be-btn-fade be-btn-plain">&nbsp;
+                <input type="button" class="be-mt-50 be-btn be-btn-green be-btn-fade be-btn-outline" value="be-btn be-btn-green be-btn-fade be-btn-outline">&nbsp;
             </div>
 
             <div class="be-mt-100">
