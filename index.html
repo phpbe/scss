@@ -286,20 +286,28 @@
         <h2 class="be-h2 be-pb-50 be-mt-400">按钮（button）</h2>
         <div class="be-mt-100" id="demo-btn">
 
-            <p>
-                <strong>be-btn：</strong>默认按钮<br>
-                <strong>be-btn-*：</strong>指定色调<br>
-                <strong>be-btn-outline：</strong>外边框<br>
-                <strong>be-btn-plain：</strong>朴素风格, 仅主色+辅助色可用<br>
-                <strong>be-btn-round：</strong>圆角<br>
-                <strong>be-btn-sm/be-btn-lg：</strong>尺寸大小<br>
+            <p class="be-lh-200">
+                <strong>be-btn：</strong>基本样式 - 默认按钮<br>
+                <strong>be-btn-[颜色]：</strong>指定颜色的按钮<br>
+                <strong>be-btn-plain：</strong>颜色二次处理 - 朴素风格,<br>
+                <strong>be-btn-fade：</strong>颜色二次处理 - 褪色，鼠标悬停时恢复全色<br>
+                <strong>be-btn-outline：</strong>控制外观 - 外边框<br>
+                <strong>be-btn-round：</strong>控制外观 - 圆角<br>
+                <strong>be-btn-sm/be-btn-lg：</strong>控制外观 - 尺寸大小<br>
             </p>
-            <p>以上类名组合使用</p>
+
+            <h4 class="be-h4">编写顺序：基本样式 + 颜色/颜色二次处理 + 控制外观</h4>
+            <p>be-btn 为按钮基本样式，需放在最前</p>
+            <p>be-btn-[颜色] 放在中间</p>
+            <p>be-btn-fade/be-btn-plain 颜色二次处理，须放在 be-btn-[颜色] 之后</p>
+            <p>be-btn-outline/be-btn-round/be-btn-sm/be-btn-lg 控制外观，放在最后</p>
 
             <h4 class="be-h4">默认按钮</h4>
+            <p>默认按钮悬停颜色为主色</p>
             <div class="be-mt-100">
                 <input type="button" class="be-mt-50 be-btn" value="be-btn">&nbsp;
                 <input type="button" class="be-mt-50 be-btn be-btn-outline" value="be-btn be-btn-outline">&nbsp;
+                <input type="button" class="be-mt-50 be-btn be-btn-plain" value="be-btn be-btn-plain">&nbsp;
                 <input type="button" class="be-mt-50 be-btn be-btn-round" value="be-btn be-btn-round">&nbsp;
             </div>
 
@@ -307,6 +315,7 @@
             <div class="be-mt-100">
                 <input type="button" class="be-mt-50 be-btn be-btn-black" value="be-btn be-btn-black">&nbsp;
                 <input type="button" class="be-mt-50 be-btn be-btn-black be-btn-outline" value="be-btn be-btn-black be-btn-outline">&nbsp;
+                <input type="button" class="be-mt-50 be-btn be-btn-black be-btn-plain" value="be-btn be-btn-black be-btn-plain">&nbsp;
                 <input type="button" class="be-mt-50 be-btn be-btn-black be-btn-round" value="be-btn be-btn-black be-btn-round">&nbsp;
             </div>
 
@@ -314,6 +323,7 @@
             <div class="be-mt-100">
                 <input type="button" class="be-mt-50 be-btn be-btn-gray" value="be-btn be-btn-gray">&nbsp;
                 <input type="button" class="be-mt-50 be-btn be-btn-gray be-btn-outline" value="be-btn be-btn-gray be-btn-outline">&nbsp;
+                <input type="button" class="be-mt-50 be-btn be-btn-gray be-btn-plain" value="be-btn be-btn-gray be-btn-plain">&nbsp;
                 <input type="button" class="be-mt-50 be-btn be-btn-gray be-btn-round" value="be-btn be-btn-gray be-btn-round">&nbsp;
             </div>
 
@@ -345,20 +355,27 @@
                 <a class="be-mt-50 be-btn be-btn-main" href="">be-btn be-btn-main（超链接）</a>
             </div>
 
+            <h4 class="be-h4 be-mt-200">褪色处理</h4>
+            <div class="be-mt-100">
+                <input type="button" class="be-mt-50 be-btn be-btn-red be-btn-fade" value="be-btn be-btn-red be-btn-fade">&nbsp;
+                <input type="button" class="be-mt-50 be-btn be-btn-green be-btn-fade be-btn-outline" value="be-btn be-btn-green be-btn-fade be-btn-outline">&nbsp;
+                <input type="button" class="be-mt-50 be-btn be-btn-purple be-btn-fade be-btn-plain" value="be-btn be-btn-purple be-btn-fade be-btn-plain">&nbsp;
+                <input type="button" class="be-mt-50 be-btn be-btn-purple be-btn-fade be-btn-plain be-btn-round" value="be-btn be-btn-purple be-btn-fade be-btn-plain be-btn-round">&nbsp;
+                <input type="button" class="be-mt-50 be-btn be-btn-black be-btn-fade" value="be-btn be-btn-black be-btn-fade">&nbsp;
+                <input type="button" class="be-mt-50 be-btn be-btn-gray be-btn-fade" value="be-btn be-btn-gray be-btn-fade">&nbsp;
+                <input type="button" class="be-mt-50 be-btn be-btn-fade" value="be-btn be-btn-fade">&nbsp;
+
+            </div>
+
             <h4 class="be-h4 be-mt-200">尺寸大小</h4>
             <div class="be-mt-100">
-                <input type="button" class="be-mt-50 be-btn be-btn-main be-btn-sm" value="be-btn be-btn-main be-btn-sm">
-                <input type="button" class="be-mt-50 be-btn be-btn-main be-btn-lg" value="be-btn be-btn-main be-btn-lg">
+                <input type="button" class="be-mt-50 be-btn be-btn-pink be-btn-sm" value="be-btn be-btn-pink be-btn-sm">
+                <input type="button" class="be-mt-50 be-btn be-btn-orange be-btn-lg" value="be-btn be-btn-orange be-btn-lg">
             </div>
 
             <h4 class="be-h4 be-mt-200">禁用</h4>
             <div class="be-mt-100">
                 <input type="button" class="be-mt-50 be-btn be-btn-main" value="be-btn be-btn-main" disabled>
-            </div>
-
-            <h4 class="be-h4 be-mt-200">多项组合</h4>
-            <div class="be-mt-100">
-                <input type="button" class="be-mt-50 be-btn be-btn-purple be-btn-plain be-btn-round be-btn-lg" value="be-btn be-btn-purple be-btn-plain be-btn-round be-btn-lg">&nbsp;
             </div>
         </div>
 

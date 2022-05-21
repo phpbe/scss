@@ -18,8 +18,8 @@
 
   &:hover,
   &:focus {
-    color: $mainColor;
-    background-color: $mainColor-9;
+    color: #fff;
+    background-color: $mainColor;
     border: 1px solid $mainColor;
     text-decoration: none;
     outline: 0;
@@ -34,57 +34,97 @@
 
 .be-btn-outline {
   background-color: #fff;
-
   &:hover,
   &:focus {
+    color: $mainColor;
     background-color: #fff;
+    border: 1px solid $mainColor;
   }
 }
 
+.be-btn-plain {
+  &:hover,
+  &:focus {
+    color: $mainColor;
+    background-color: $mainColor-9;
+    border: 1px solid $mainColor;
+  }
+}
+
+
 @each $name, $color in map-merge(("black": $black, "gray": $gray, "main": $mainColor), $colors) {
   .be-btn-#{$name} {
-    color: #fff !important;
-    background-color: $color !important;
-    border: 1px solid $color !important;
+    color: #fff;
+    background-color: $color;
+    border: 1px solid $color;
 
     &:hover,
     &:focus {
+      color: #fff;
+      background-color: mix(black, $color, 20%);
+      border: 1px solid mix(black, $color, 20%);
+    }
+  }
+
+  .be-btn-#{$name}.be-btn-fade {
+    &:hover,
+    &:focus {
       color: #fff !important;
-      background-color: mix(black, $color, 20%) !important;
-      border: 1px solid mix(black, $color, 20%) !important;
+      background-color: $color !important;
+      border: 1px solid $color !important;
     }
   }
 
   .be-btn-#{$name}.be-btn-outline {
-    color: $color !important;
-    background-color: #fff !important;
-    border: 1px solid $color !important;
+    color: $color;
+    background-color: #fff;
+    border: 1px solid $color;
 
     &:hover,
     &:focus {
-      color: #fff !important;
-      background-color: $color !important;
-      border: 1px solid $color !important;
+      color: #fff;
+      background-color: $color;
+      border: 1px solid $color;
     }
   }
 
   .be-btn-#{$name}.be-btn-plain {
-    color: $color !important;
-    background-color: mix(white, $color, 90%) !important;
-    border: 1px solid $color !important;
+    color: $color;
+    background-color: mix(white, $color, 90%);
+    border: 1px solid $color;
 
     &:hover,
     &:focus {
-      color: #fff !important;
-      background-color: $color !important;
+      color: #fff;
+      background-color: $color;
+      border: 1px solid $color;
+    }
+  }
+
+  .be-btn-#{$name}.be-btn-fade.be-btn-outline {
+    &:hover,
+    &:focus {
+      color: $color !important;
+      background-color: #fff !important;
       border: 1px solid $color !important;
     }
   }
 
+  .be-btn-#{$name}.be-btn-fade.be-btn-plain {
+    &:hover,
+    &:focus {
+      color: $color !important;
+      background-color: mix(white, $color, 90%) !important;
+      border: 1px solid $color !important;
+    }
+  }
 }
 
-
-
+.be-btn-fade {
+  color: $btn-color !important;
+  background-color: $btn-background-color !important;
+  border: 1px solid $btn-border-color !important;
+}
 
 .be-btn-sm {
   font-size: 0.875rem;
