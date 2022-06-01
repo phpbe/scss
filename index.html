@@ -153,9 +153,17 @@ use ScssPhp\ScssPhp\Compiler;
 
 $compiler = new Compiler();
 
-$compiler->addImportPath('/path/to/your/scss/');
+$scss = '@import "path/to/your/scss//vars";';
+$scss .= '@import "vendor/be/scss/src/functions";';
+$scss .= '@import "vendor/be/scss/src/main";';
+$scss .= '@import "vendor/be/scss/src/container";';
+$scss .= '@import "vendor/be/scss/src/grid";';
+$scss .= '@import "vendor/be/scss/src/button";';
+$scss .= '@import "vendor/be/scss/src/form";';
+$scss .= '@import "vendor/be/scss/src/utilities";';
 
-$result = $compiler->compileString('@import "be.scss";');
+$compiler->addImportPath(__DIR__ . '/');
+$result = $compiler->compileString($scss);
 
 file_put_contents('/path/to/your/css/be.css', $result->getCss());
 ?&gt;
