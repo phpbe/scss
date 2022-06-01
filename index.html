@@ -88,16 +88,16 @@ $configTheme = \Be\Be::getConfig('Theme.ShopFai.Theme');
 $libCss = \Be\Be::getLib('Css');
 
 $mainColor = $configTheme->mainColor;
-$mainColor1 = $libCss->lighten($mainColor, 10);
-$mainColor2 = $libCss->lighten($mainColor, 20);
-$mainColor3 = $libCss->lighten($mainColor, 30);
-$mainColor4 = $libCss->lighten($mainColor, 40);
-$mainColor5 = $libCss->lighten($mainColor, 50);
-$mainColor6 = $libCss->lighten($mainColor, 60);
-$mainColor7 = $libCss->lighten($mainColor, 70);
-$mainColor8 = $libCss->lighten($mainColor, 80);
-$mainColor9 = $libCss->lighten($mainColor, 90);
-$mainColorHover = $libCss->darken($mainColor, 10);
+$mainColor1 = $libCss->lighter($mainColor, 10);
+$mainColor2 = $libCss->lighter($mainColor, 20);
+$mainColor3 = $libCss->lighter($mainColor, 30);
+$mainColor4 = $libCss->lighter($mainColor, 40);
+$mainColor5 = $libCss->lighter($mainColor, 50);
+$mainColor6 = $libCss->lighter($mainColor, 60);
+$mainColor7 = $libCss->lighter($mainColor, 70);
+$mainColor8 = $libCss->lighter($mainColor, 80);
+$mainColor9 = $libCss->lighter($mainColor, 90);
+$mainColorHover = $libCss->darker($mainColor, 10);
 // 以上示例为 Be 框架中的用法，其它框架直接给变量赋值即可
 ?&gt;
 &lt;style type="text/css"&gt;
