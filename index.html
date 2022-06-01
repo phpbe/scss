@@ -81,7 +81,12 @@
         <p>直接引入的方式将使用默认的样式，可以通过CSS常量修改主色</p>
         <pre><code>
 &lt;?php
+// 主题配置
+$configTheme = \Be\Be::getConfig('Theme.ShopFai.Theme');
+
+// CSS 处理库
 $libCss = \Be\Be::getLib('Css');
+
 $mainColor = $configTheme->mainColor;
 $mainColor1 = $libCss->lighten($mainColor, 10);
 $mainColor2 = $libCss->lighten($mainColor, 20);
@@ -93,6 +98,7 @@ $mainColor7 = $libCss->lighten($mainColor, 70);
 $mainColor8 = $libCss->lighten($mainColor, 80);
 $mainColor9 = $libCss->lighten($mainColor, 90);
 $mainColorHover = $libCss->darken($mainColor, 10);
+// 以上示例为 Be 框架中的用法，其它框架直接给变量赋值即可
 ?&gt;
 &lt;style type="text/css"&gt;
     body {
