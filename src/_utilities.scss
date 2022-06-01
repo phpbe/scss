@@ -24,8 +24,25 @@
 
 
 // ===================================================================================================================== 颜色
+.be-c-main {
+  color: var(--main-color);
+}
 
-@each $name, $color in map-merge(map-merge($gray-colors, $main-colors), $colors) {
+.be-bc-main {
+  background-color: var(--main-color);
+}
+
+@for $i from 1 through 9 {
+  .be-c-main-#{$i} {
+    color: unquote("var(--main-color-" + $i + ")");
+  }
+
+  .be-bc-main-#{$i} {
+    background-color: unquote("var(--main-color-" + $i + ")");
+  }
+}
+
+@each $name, $color in map-merge($gray-colors, $colors) {
   .be-c-#{$name} {
     color: $color;
   }
@@ -134,32 +151,44 @@
 
 // ===================================================================================================================== 边距
 @each $name, $spacing in $spacings {
-  .be-p-#{$name} {
-    padding: $spacing;
-  }
+  @if $spacing != "auto" {
+    .be-p-#{$name} {
+      padding: $spacing;
+    }
 
-  .be-pl-#{$name},
-  .be-px-#{$name} {
-    padding-left: $spacing;
-  }
+    .be-pl-#{$name},
+    .be-px-#{$name} {
+      padding-left: $spacing;
+    }
 
-  .be-pr-#{$name},
-  .be-px-#{$name} {
-    padding-right: $spacing;
-  }
+    .be-pr-#{$name},
+    .be-px-#{$name} {
+      padding-right: $spacing;
+    }
 
-  .be-pt-#{$name},
-  .be-py-#{$name} {
-    padding-top: $spacing;
-  }
+    .be-pt-#{$name},
+    .be-py-#{$name} {
+      padding-top: $spacing;
+    }
 
-  .be-pb-#{$name},
-  .be-py-#{$name} {
-    padding-bottom: $spacing;
-  }
+    .be-pb-#{$name},
+    .be-py-#{$name} {
+      padding-bottom: $spacing;
+    }
 
-  .be-m-#{$name} {
-    margin: $spacing;
+    .be-m-#{$name} {
+      margin: $spacing;
+    }
+
+    .be-mt-#{$name},
+    .be-my-#{$name} {
+      margin-top: $spacing;
+    }
+
+    .be-mb-#{$name},
+    .be-my-#{$name} {
+      margin-bottom: $spacing;
+    }
   }
 
   .be-ml-#{$name},
@@ -172,15 +201,6 @@
     margin-right: $spacing;
   }
 
-  .be-mt-#{$name},
-  .be-my-#{$name} {
-    margin-top: $spacing;
-  }
-
-  .be-mb-#{$name},
-  .be-my-#{$name} {
-    margin-bottom: $spacing;
-  }
 }
 
 

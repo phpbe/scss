@@ -19,8 +19,8 @@
   &:hover,
   &:focus {
     color: #fff;
-    background-color: $mainColor;
-    border: 1px solid $mainColor;
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
     text-decoration: none;
     outline: 0;
   }
@@ -36,23 +36,90 @@
   background-color: #fff;
   &:hover,
   &:focus {
-    color: $mainColor;
+    color: var(--main-color);
     background-color: #fff;
-    border: 1px solid $mainColor;
+    border: 1px solid var(--main-color);
   }
 }
 
 .be-btn-plain {
   &:hover,
   &:focus {
-    color: $mainColor;
-    background-color: $mainColor-9;
-    border: 1px solid $mainColor;
+    color: var(--main-color);
+    background-color: var(--main-color-9);
+    border: 1px solid var(--main-color);
   }
 }
 
 
-@each $name, $color in map-merge(("black": $black, "gray": $gray, "main": $mainColor), $colors) {
+
+.be-btn-main {
+  color: #fff;
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    background-color: var(--main-color-hover);
+    border: 1px solid var(--main-color-hover);
+  }
+}
+
+.be-btn-main.be-btn-fade {
+  &:hover,
+  &:focus {
+    color: #fff !important;
+    background-color: var(--main-color) !important;
+    border: 1px solid var(--main-color) !important;
+  }
+}
+
+.be-btn-main.be-btn-outline {
+  color: var(--main-color);
+  background-color: #fff;
+  border: 1px solid var(--main-color);
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+  }
+}
+
+.be-btn-main.be-btn-plain {
+  color: var(--main-color);
+  background-color: var(--main-color-9);
+  border: 1px solid var(--main-color);
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+  }
+}
+
+.be-btn-main.be-btn-fade.be-btn-outline {
+  &:hover,
+  &:focus {
+    color: var(--main-color) !important;
+    background-color: #fff !important;
+    border: 1px solid var(--main-color) !important;
+  }
+}
+
+.be-btn-main.be-btn-fade.be-btn-plain {
+  &:hover,
+  &:focus {
+    color: var(--main-color) !important;
+    background-color: var(--main-color-9) !important;
+    border: 1px solid var(--main-color) !important;
+  }
+}
+
+@each $name, $color in map-merge(("black": $black, "gray": $gray), $colors) {
   .be-btn-#{$name} {
     color: #fff;
     background-color: $color;
