@@ -78,19 +78,68 @@
 
         <h4 class="be-h4 be-mt-200">方式一：直接引入 be.css</h4>
         <pre><code>&lt;link rel="stylesheet" href="https://scss.phpbe.com/be.css"&gt;</code></pre>
-        <p>直接引入的方式将使用默认的样多格式</p>
+        <p>直接引入的方式将使用默认的样式，可以通过CSS常量修改主色</p>
+        <pre><code>
+&lt;?php
+$libCss = \Be\Be::getLib('Css');
+$mainColor = $configTheme->mainColor;
+$mainColor1 = $libCss->lighten($mainColor, 10);
+$mainColor2 = $libCss->lighten($mainColor, 20);
+$mainColor3 = $libCss->lighten($mainColor, 30);
+$mainColor4 = $libCss->lighten($mainColor, 40);
+$mainColor5 = $libCss->lighten($mainColor, 50);
+$mainColor6 = $libCss->lighten($mainColor, 60);
+$mainColor7 = $libCss->lighten($mainColor, 70);
+$mainColor8 = $libCss->lighten($mainColor, 80);
+$mainColor9 = $libCss->lighten($mainColor, 90);
+$mainColorHover = $libCss->darken($mainColor, 10);
+?&gt;
+&lt;style type="text/css"&gt;
+    body {
+        --main-color: &lt;?php echo $mainColor; ?&gt;;
+        --main-color-1: &lt;?php echo $mainColor1; ?&gt;;
+        --main-color-2: &lt;?php echo $mainColor2; ?&gt;;
+        --main-color-3: &lt;?php echo $mainColor3; ?&gt;;
+        --main-color-4: &lt;?php echo $mainColor4; ?&gt;;
+        --main-color-5: &lt;?php echo $mainColor5; ?&gt;;
+        --main-color-6: &lt;?php echo $mainColor6; ?&gt;;
+        --main-color-7: &lt;?php echo $mainColor7; ?&gt;;
+        --main-color-8: &lt;?php echo $mainColor8; ?&gt;;
+        --main-color-9: &lt;?php echo $mainColor9; ?&gt;;
+        --main-color-hover: &lt;?php echo $mainColorHover; ?&gt;;
+    }
+&lt;/style&gt;
+        </code></pre>
 
-        <h4 class="be-h4 be-mt-200">方式二：引入 be/scss 库</h4>
+        <h4 class="be-h4 be-mt-200">方式二：引入 be/scss 库，跟据需要定制化任何样式</h4>
         <p>BE框架的项目，be/scss 默认已经引入</p>
         <p>非BE框架的项目，使用 composer require be/scc 引入， 或在在项目 composer.json 中加入以下代码段后 执行 composer update</p>
         <pre><code>
-            ...
-            "require": {
-                "be/scss": "*"
-            }
-            ...
+...
+"require": {
+    "be/scss": "*"
+}
+...
         </code></pre>
-        <p>引入be/scss库后，在vendor/be/scss目录下，你可以跟据需要编辑配置文件：_vars.scss，重新编译生成 be.css，生成个性化的前端样式。</p>
+        <p>引入be/scss库后，在具体的项目中新建一个目录，例 scss。 将 vendor/be/scss 的常量文件 _vars.scss 及 主文件 be.scss 复制到该目录中，修改 be.sccs 如下（相对咱径以肯体项目为准）:</p>
+        <pre><code>
+// 参数常量
+@import "vars"; // 注意：引入文件里不需要开头的下划线
+
+// 相关函数
+@import "../../../vendor/be/scss/src/functions";
+
+@import "../../../vendor/be/scss/src/main"; // 主要
+@import "../../../vendor/be/scss/src/container"; // 容器
+@import "../../../vendor/be/scss/src/grid"; // 栅格系统
+@import "../../../vendor/be/scss/src/button"; // 按钮
+@import "../../../vendor/be/scss/src/form"; // 表单
+@import "../../../vendor/be/scss/src/utilities"; // 工具类
+        </code></pre>
+        <p>跟据需要修改 _vars.scss 中的变量值，使用 scss 编译工具（如:koala）重新编译 be.scss 生成个性化的 be.css。</p>
+        <p>示例中仅重写了 vars 常量, 实际项目中可跟据需要重写某个模块（如按钮）</p>
+        <p>不要直接修改 vendor 中的源文件，这样将限制后期 composer 更新功能的使用。</p>
+
 
         <script>
             let arr,len ,i;
