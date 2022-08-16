@@ -361,11 +361,21 @@ file_put_contents('/path/to/your/css/be.css', $result->getCss());
             <h4 class="be-h4 be-mb-100">屏幕识别 + 混合</h4>
             <p>大屏时，左侧固定，右侧自增长、 小屏时，按两行各 100% 展示</p>
             <div class="be-row be-mb-100">
-                <div class="be-col-auto-lg be-col-sm-24">
-                    <div class="demo-box">be-col-auto-lg be-col-sm-24</div>
+                <div class="be-col-24 be-col-auto-lg">
+                    <div class="demo-box">be-col-24 be-col-auto-lg</div>
                 </div>
-                <div class="be-col-lg be-col-sm-24">
-                    <div class="demo-box">be-col-lg be-col-sm-24</div>
+                <div class="be-col-24 be-col-lg">
+                    <div class="demo-box">be-col-24 be-col-lg</div>
+                </div>
+            </div>
+
+            <p>小屏时，左侧固定，右侧自增长、 大屏时，各50%展示</p>
+            <div class="be-row be-mb-100">
+                <div class="be-col-auto be-col-lg-12">
+                    <div class="demo-box">be-col-auto be-col-lg-12</div>
+                </div>
+                <div class="be-col be-col-lg-12">
+                    <div class="demo-box">be-col be-col-lg-124</div>
                 </div>
             </div>
 
