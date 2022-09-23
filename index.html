@@ -71,13 +71,13 @@
         </ul>
 
         <div class="be-mt-200">
-            源码地址： <a href="https://github.com/phpbe/scss" target="_blank">https://github.com/phpbe/scss</a>
+            源码地址： <a href="https://github.com/phpbe/ui" target="_blank">https://github.com/phpbe/ui</a>
         </div>
 
         <h2 class="be-h2 be-pb-50 be-mt-400">如何使用</h2>
 
         <h4 class="be-h4 be-mt-200">方式一：直接引入 be.css</h4>
-        <pre><code>&lt;link rel="stylesheet" href="https://cdn.phpbe.com/scss/be.css"&gt;</code></pre>
+        <pre><code>&lt;link rel="stylesheet" href="https://cdn.phpbe.com/ui/be.css"&gt;</code></pre>
         <p>直接引入的方式将使用默认的样式，可以通过CSS常量修改主色</p>
         <pre><code>
 &lt;?php
@@ -117,30 +117,30 @@ $mainColorHover = $libCss->darker($mainColor, 10);
 &lt;/style&gt;
         </code></pre>
 
-        <h4 class="be-h4 be-mt-200">方式二：引入 be/scss 库，跟据需要定制化任何样式</h4>
-        <p>BE框架的项目，be/scss 默认已经引入</p>
-        <p>非BE框架的项目，使用composer命令行 "composer require be/scss" 引入， 或在在项目 composer.json 中加入以下代码段后 执行 composer update</p>
+        <h4 class="be-h4 be-mt-200">方式二：引入 be/ui 库，跟据需要定制化任何样式</h4>
+        <p>BE框架的项目，be/ui 默认已经引入</p>
+        <p>非BE框架的项目，使用composer命令行 "composer require be/ui" 引入， 或在在项目 composer.json 中加入以下代码段后 执行 composer update</p>
         <pre><code>
     ...
     "require": {
-        "be/scss": "*"
+        "be/ui": "*"
     }
     ...
         </code></pre>
-        <p>引入be/scss库后，在具体的项目中新建一个目录，例 scss。 将 vendor/be/scss 的常量文件 _vars.scss 及 主文件 be.scss 复制到该目录中，修改 be.sccs 如下（相对咱径以肯体项目为准）:</p>
+        <p>引入 be/ui 库后，在具体的项目中新建一个目录，例 ui。 将 vendor/be/ui 的常量文件 _vars.scss 及 主文件 be.scss 复制到该目录中，修改 be.sccs 如下（相对咱径以肯体项目为准）:</p>
         <pre><code>
 // 参数常量
 @import "vars"; // 注意：引入文件里不需要开头的下划线
 
 // 相关函数
-@import "../../../vendor/be/scss/src/functions";
+@import "../../../vendor/be/ui/src/functions";
 
-@import "../../../vendor/be/scss/src/main"; // 主要
-@import "../../../vendor/be/scss/src/container"; // 容器
-@import "../../../vendor/be/scss/src/grid"; // 栅格系统
-@import "../../../vendor/be/scss/src/button"; // 按钮
-@import "../../../vendor/be/scss/src/form"; // 表单
-@import "../../../vendor/be/scss/src/utilities"; // 工具类
+@import "../../../vendor/be/ui/src/main"; // 主要
+@import "../../../vendor/be/ui/src/container"; // 容器
+@import "../../../vendor/be/ui/src/grid"; // 栅格系统
+@import "../../../vendor/be/ui/src/button"; // 按钮
+@import "../../../vendor/be/ui/src/form"; // 表单
+@import "../../../vendor/be/ui/src/utilities"; // 工具类
         </code></pre>
         <p>跟据需要修改 _vars.scss 中的变量值，使用 scss 编译工具（如:koala）重新编译 be.scss 生成个性化的 be.css。</p>
         <p>示例中仅重写了 vars 常量, 实际项目中可跟据需要重写某个模块（如按钮）</p>
@@ -154,13 +154,13 @@ use ScssPhp\ScssPhp\Compiler;
 $compiler = new Compiler();
 
 $scss = '@import "path/to/your/scss/vars";';
-$scss .= '@import "vendor/be/scss/src/functions";';
-$scss .= '@import "vendor/be/scss/src/main";';
-$scss .= '@import "vendor/be/scss/src/container";';
-$scss .= '@import "vendor/be/scss/src/grid";';
-$scss .= '@import "vendor/be/scss/src/button";';
-$scss .= '@import "vendor/be/scss/src/form";';
-$scss .= '@import "vendor/be/scss/src/utilities";';
+$scss .= '@import "vendor/be/ui/src/functions";';
+$scss .= '@import "vendor/be/ui/src/main";';
+$scss .= '@import "vendor/be/ui/src/container";';
+$scss .= '@import "vendor/be/ui/src/grid";';
+$scss .= '@import "vendor/be/ui/src/button";';
+$scss .= '@import "vendor/be/ui/src/form";';
+$scss .= '@import "vendor/be/ui/src/utilities";';
 
 $compiler->addImportPath(__DIR__ . '/');
 $result = $compiler->compileString($scss);

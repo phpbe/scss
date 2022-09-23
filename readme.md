@@ -4,4 +4,4 @@
 
 
 #### 示例网址：
-http://scss.phpbe.com
+http://ui.phpbe.com

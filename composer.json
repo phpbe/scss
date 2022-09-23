@@ -1,11 +1,11 @@
 {
-  "name": "be/scss",
+  "name": "be/ui",
   "type": "library",
   "description": "PHP BE 前端框架",
   "keywords": [
     "PHP",
     "Be",
-    "scss"
+    "UI"
   ],
   "license": "MIT",
   "authors": [
