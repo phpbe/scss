@@ -29,18 +29,18 @@
   @if $min != 0 {
     @media (min-width: $min) {
 
-      .be-col-#{$breakpoint} {
+      .be-#{$breakpoint}-col {
         flex: 1 0 0 !important;
         width: auto !important;;
       }
 
-      .be-col-auto-#{$breakpoint} {
+      .be-#{$breakpoint}-col-auto {
         flex: 0 0 auto !important;;
         width: auto !important;;
       }
 
       @for $i from 0 through $grid-columns {
-        .be-col-#{$breakpoint}-#{$i} {
+        .be-#{$breakpoint}-col-#{$i} {
           @if $i == 0 {
             display: none;
           } @else {

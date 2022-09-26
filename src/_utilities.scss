@@ -72,7 +72,7 @@
               none: none,
               block: block
       ) {
-        .be-d-#{$breakpoint}-#{$name} {
+        .be-#{$breakpoint}-d-#{$name} {
           display: $display;
         }
       }
