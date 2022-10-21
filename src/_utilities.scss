@@ -23,22 +23,38 @@
 
 
 // ===================================================================================================================== 颜色
-.be-c-main {
-  color: var(--main-color);
+.be-c-major {
+  color: var(--major-color);
 }
 
-.be-bc-main {
-  background-color: var(--main-color);
+.be-bc-major {
+  background-color: var(--major-color);
 }
 
 @for $i from 1 through 9 {
-  .be-c-main-#{$i} {
-    color: unquote("var(--main-color-" + $i + ")");
+  .be-c-major#{$i} {
+    color: unquote("var(--major-color" + $i + ")");
   }
 
-  .be-bc-main-#{$i} {
-    background-color: unquote("var(--main-color-" + $i + ")");
+  .be-c-major-#{$i} {
+    color: unquote("var(--major-color-" + $i + ")");
   }
+
+  .be-bc-major#{$i} {
+    background-color: unquote("var(--major-color" + $i + ")");
+  }
+
+  .be-bc-major-#{$i} {
+    background-color: unquote("var(--major-color-" + $i + ")");
+  }
+}
+
+.be-c-minor {
+  color: var(--minor-color);
+}
+
+.be-bc-minor {
+  background-color: var(--minor-color);
 }
 
 @each $name, $color in map-merge($gray-colors, $colors) {
@@ -338,12 +354,12 @@
 
     a {
       text-decoration: none;
-      color: var(--main-color);
+      color: var(--major-color);
       transition: all .3s ease-in-out;
     }
 
     a:hover {
-      background-color: var(--main-color-9);
+      background-color: var(--major-color-9);
     }
 
     span {
@@ -374,8 +390,8 @@
   li.active {
     a, span {
       color: #fff;
-      background-color: var(--main-color);
-      border-color: var(--main-color);
+      background-color: var(--major-color);
+      border-color: var(--major-color);
     }
   }
 }

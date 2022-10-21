@@ -1,15 +1,43 @@
+$majorColor1: mix(black, $majorColor, 10%) !default;
+$majorColor2: mix(black, $majorColor, 20%) !default;
+$majorColor3: mix(black, $majorColor, 30%) !default;
+$majorColor4: mix(black, $majorColor, 40%) !default;
+$majorColor5: mix(black, $majorColor, 50%) !default;
+$majorColor6: mix(black, $majorColor, 60%) !default;
+$majorColor7: mix(black, $majorColor, 70%) !default;
+$majorColor8: mix(black, $majorColor, 80%) !default;
+$majorColor9: mix(black, $majorColor, 90%) !default;
+$majorColor-1: mix(white, $majorColor, 10%) !default;
+$majorColor-2: mix(white, $majorColor, 20%) !default;
+$majorColor-3: mix(white, $majorColor, 30%) !default;
+$majorColor-4: mix(white, $majorColor, 40%) !default;
+$majorColor-5: mix(white, $majorColor, 50%) !default;
+$majorColor-6: mix(white, $majorColor, 60%) !default;
+$majorColor-7: mix(white, $majorColor, 70%) !default;
+$majorColor-8: mix(white, $majorColor, 80%) !default;
+$majorColor-9: mix(white, $majorColor, 90%) !default;
+
 :root {
-  --main-color: #{$mainColor};
-  --main-color-1: #{$mainColor-1};
-  --main-color-2: #{$mainColor-2};
-  --main-color-3: #{$mainColor-3};
-  --main-color-4: #{$mainColor-4};
-  --main-color-5: #{$mainColor-5};
-  --main-color-6: #{$mainColor-6};
-  --main-color-7: #{$mainColor-7};
-  --main-color-8: #{$mainColor-8};
-  --main-color-9: #{$mainColor-9};
-  --main-color-hover: #{$mainColor-hover};
+  --major-color: #{$majorColor};
+  --major-color1: #{$majorColor1};
+  --major-color2: #{$majorColor2};
+  --major-color3: #{$majorColor3};
+  --major-color4: #{$majorColor4};
+  --major-color5: #{$majorColor5};
+  --major-color6: #{$majorColor6};
+  --major-color7: #{$majorColor7};
+  --major-color8: #{$majorColor8};
+  --major-color9: #{$majorColor9};
+  --major-color-1: #{$majorColor-1};
+  --major-color-2: #{$majorColor-2};
+  --major-color-3: #{$majorColor-3};
+  --major-color-4: #{$majorColor-4};
+  --major-color-5: #{$majorColor-5};
+  --major-color-6: #{$majorColor-6};
+  --major-color-7: #{$majorColor-7};
+  --major-color-8: #{$majorColor-8};
+  --major-color-9: #{$majorColor-9};
+  --minor-color: #{$minorColor};
   --color-red: #{$red};
   --color-orange: #{$orange};
   --color-yellow: #{$yellow};
@@ -19,6 +47,9 @@
   --color-pink: #{$pink};
   --color-brown: #{$brown};
 }
+
+
+
 
 *,
 *::before,
@@ -42,6 +73,7 @@
 .be-h6 {
   margin: 0;
   font-weight: bold;
+  color: var(--minor-color);
 }
 
 .be-h1 {

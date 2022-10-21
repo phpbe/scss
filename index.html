@@ -78,41 +78,25 @@
 
         <h4 class="be-h4 be-mt-200">方式一：直接引入 be.css</h4>
         <pre><code>&lt;link rel="stylesheet" href="https://cdn.phpbe.com/ui/be.css"&gt;</code></pre>
-        <p>引入该CSS后即可直接使用，风格为默认的样式，可以通过CSS常量覆盖修改主色</p>
+        <p>引入该CSS后即可直接使用，风格为默认的样式，可以通过CSS常量覆盖修改主色调及搭配色</p>
         <pre><code>
-&lt;?php
-// 主题配置
-$configTheme = \Be\Be::getConfig('Theme.Sample.Theme');
-
-// CSS 处理库
-$libCss = \Be\Be::getLib('Css');
-
-$mainColor = $configTheme->mainColor;
-$mainColor1 = $libCss->lighter($mainColor, 10);
-$mainColor2 = $libCss->lighter($mainColor, 20);
-$mainColor3 = $libCss->lighter($mainColor, 30);
-$mainColor4 = $libCss->lighter($mainColor, 40);
-$mainColor5 = $libCss->lighter($mainColor, 50);
-$mainColor6 = $libCss->lighter($mainColor, 60);
-$mainColor7 = $libCss->lighter($mainColor, 70);
-$mainColor8 = $libCss->lighter($mainColor, 80);
-$mainColor9 = $libCss->lighter($mainColor, 90);
-$mainColorHover = $libCss->darker($mainColor, 10);
-// 以上示例为 Be 框架中的用法，其它框架直接给变量赋值即可
-?&gt;
 &lt;style type="text/css"&gt;
     body {
-        --main-color: &lt;?php echo $mainColor; ?&gt;;
-        --main-color-1: &lt;?php echo $mainColor1; ?&gt;;
-        --main-color-2: &lt;?php echo $mainColor2; ?&gt;;
-        --main-color-3: &lt;?php echo $mainColor3; ?&gt;;
-        --main-color-4: &lt;?php echo $mainColor4; ?&gt;;
-        --main-color-5: &lt;?php echo $mainColor5; ?&gt;;
-        --main-color-6: &lt;?php echo $mainColor6; ?&gt;;
-        --main-color-7: &lt;?php echo $mainColor7; ?&gt;;
-        --main-color-8: &lt;?php echo $mainColor8; ?&gt;;
-        --main-color-9: &lt;?php echo $mainColor9; ?&gt;;
-        --main-color-hover: &lt;?php echo $mainColorHover; ?&gt;;
+        &lt;?php
+        // 主题配置
+        $configTheme = \Be\Be::getConfig('Theme.System.Theme');
+
+        echo '--major-color: ' . $configTheme->majorColor . ';';
+
+        // CSS 处理库
+        $libCss = \Be\Be::getLib('Css');
+        for ($i=1; $i<=9; $i++) {
+            echo '--major-color-' . $i. ': ' . $libCss->lighter($configTheme->majorColor, $i * 10) . ';';
+            echo '--major-color' . $i. ': ' . $libCss->darker($configTheme->majorColor, $i * 10) . ';';
+        }
+
+        echo '--minor-color: ' . $configTheme->minorColor . ';';
+        ?&gt;
     }
 &lt;/style&gt;
         </code></pre>
@@ -190,13 +174,14 @@ file_put_contents('/path/to/your/css/be.css', $result->getCss());
 
         <h4 class="be-h4 be-mt-200">主色 & 主色系</h4>
         <p class="be-mt-100 be-c-999">主色用来规定网站的主色调，网站的内容应尽量限定使用主色系+灰度包系, 与大部分前端框架不同，主色从辅助色中独立出来，可实现改变网站配色时，不影响其它色系的使用。</p>
+        <div class="be-mt-100">
         <script>
             document.write('<div class="be-d-inline-block be-mr-200">');
-            document.write('<div class="be-p-50 be-ta-center">main</div>');
-            document.write('<div class="be-b-eee be-bc-main be-px-200 be-py-50">&nbsp;</div>');
+            document.write('<div class="be-p-50 be-ta-center">major</div>');
+            document.write('<div class="be-b-eee be-bc-major be-px-200 be-py-50">&nbsp;</div>');
             document.write('</div>');
 
-            arr = ["main-1","main-2","main-3","main-4","main-5","main-6","main-7","main-8","main-9"];
+            arr = ["major-1","major-2","major-3","major-4","major-5","major-6","major-7","major-8","major-9"];
             len = arr.length;
             for(i = 0; i < len; i++) {
                 document.write('<div class="be-d-inline-block">');
@@ -205,7 +190,36 @@ file_put_contents('/path/to/your/css/be.css', $result->getCss());
                 document.write('</div>');
             }
         </script>
+        </div>
 
+        <div class="be-mt-100">
+        <script>
+            document.write('<div class="be-d-inline-block be-mr-200">');
+            document.write('<div class="be-p-50 be-ta-center">major</div>');
+            document.write('<div class="be-b-eee be-bc-major be-px-200 be-py-50">&nbsp;</div>');
+            document.write('</div>');
+
+            arr = ["major1","major2","major3","major4","major5","major6","major7","major8","major9"];
+            len = arr.length;
+            for(i = 0; i < len; i++) {
+                document.write('<div class="be-d-inline-block">');
+                document.write('<div class="be-p-50 be-ta-center">'+arr[i]+'</div>');
+                document.write('<div class="be-b-eee be-bc-' + arr[i] + ' be-px-200 be-py-50">&nbsp;</div>');
+                document.write('</div>');
+            }
+        </script>
+        </div>
+
+        <h4 class="be-h4 be-mt-200">搭配色</h4>
+        <p class="be-mt-100 be-c-999">搭配色配合主色实现网站风格</p>
+        <div class="be-mt-100">
+            <script>
+                document.write('<div class="be-d-inline-block be-mr-200">');
+                document.write('<div class="be-p-50 be-ta-center">minor</div>');
+                document.write('<div class="be-b-eee be-bc-minor be-px-200 be-py-50">&nbsp;</div>');
+                document.write('</div>');
+            </script>
+        </div>
 
         <h4 class="be-h4 be-mt-200">输助色</h4>
         <p class="be-mt-100 be-c-999">输助色定义了常用的颜色</p>
@@ -478,10 +492,10 @@ file_put_contents('/path/to/your/css/be.css', $result->getCss());
 
             <h4 class="be-h4 be-mt-200">主色按钮</h4>
             <div class="be-mt-100">
-                <input type="button" class="be-mt-50 be-btn be-btn-main" value="be-btn be-btn-main">&nbsp;
-                <input type="button" class="be-mt-50 be-btn be-btn-main be-btn-plain" value="be-btn be-btn-main be-btn-plain">&nbsp;
-                <input type="button" class="be-mt-50 be-btn be-btn-main be-btn-outline" value="be-btn be-btn-main be-btn-outline">&nbsp;
-                <input type="button" class="be-mt-50 be-btn be-btn-main be-btn-round" value="be-btn be-btn-main be-btn-round">&nbsp;
+                <input type="button" class="be-mt-50 be-btn be-btn-major" value="be-btn be-btn-major">&nbsp;
+                <input type="button" class="be-mt-50 be-btn be-btn-major be-btn-plain" value="be-btn be-btn-major be-btn-plain">&nbsp;
+                <input type="button" class="be-mt-50 be-btn be-btn-major be-btn-outline" value="be-btn be-btn-major be-btn-outline">&nbsp;
+                <input type="button" class="be-mt-50 be-btn be-btn-major be-btn-round" value="be-btn be-btn-major be-btn-round">&nbsp;
             </div>
 
             <h4 class="be-h4 be-mt-200">辅助色按钮</h4>
@@ -524,17 +538,17 @@ file_put_contents('/path/to/your/css/be.css', $result->getCss());
 
             <h4 class="be-h4 be-mt-200">主色按钮褪色后相当于默认按钮</h4>
             <div class="be-mt-100">
-                <input type="button" class="be-mt-50 be-btn be-btn-main be-btn-fade" value="be-btn be-btn-main be-btn-fade">
+                <input type="button" class="be-mt-50 be-btn be-btn-major be-btn-fade" value="be-btn be-btn-major be-btn-fade">
                 &nbsp;=&nbsp;
                 <input type="button" class="be-mt-50 be-btn" value="be-btn">
             </div>
             <div class="be-mt-100">
-                <input type="button" class="be-mt-50 be-btn be-btn-main be-btn-fade be-btn-outline" value="be-btn be-btn-main be-btn-fade be-btn-outline">
+                <input type="button" class="be-mt-50 be-btn be-btn-major be-btn-fade be-btn-outline" value="be-btn be-btn-major be-btn-fade be-btn-outline">
                 &nbsp;=&nbsp;
                 <input type="button" class="be-mt-50 be-btn be-btn-outline" value="be-btn be-btn-outline">
             </div>
             <div class="be-mt-100">
-                <input type="button" class="be-mt-50 be-btn be-btn-main be-btn-fade be-btn-plain" value="be-btn be-btn-main be-btn-fade be-btn-plain">
+                <input type="button" class="be-mt-50 be-btn be-btn-major be-btn-fade be-btn-plain" value="be-btn be-btn-major be-btn-fade be-btn-plain">
                 &nbsp;=&nbsp;
                 <input type="button" class="be-mt-50 be-btn be-btn-plain" value="be-btn be-btn-plain">
             </div>
@@ -547,13 +561,13 @@ file_put_contents('/path/to/your/css/be.css', $result->getCss());
 
             <h4 class="be-h4 be-mt-200">禁用</h4>
             <div class="be-mt-100">
-                <input type="button" class="be-mt-50 be-btn be-btn-main" value="be-btn be-btn-main" disabled>
+                <input type="button" class="be-mt-50 be-btn be-btn-major" value="be-btn be-btn-major" disabled>
             </div>
 
             <h4 class="be-h4 be-mt-200">让其它元素呈现按钮外观</h4>
             <div class="be-mt-100">
-                <button class="be-mt-50 be-btn be-btn-main">be-btn be-btn-main（&lt;button&gt;）</button>
-                <a class="be-mt-50 be-btn be-btn-main" href="">be-btn be-btn-main（超链接）</a>
+                <button class="be-mt-50 be-btn be-btn-major">be-btn be-btn-major（&lt;button&gt;）</button>
+                <a class="be-mt-50 be-btn be-btn-major" href="">be-btn be-btn-major（超链接）</a>
             </div>
 
         </div>
@@ -695,7 +709,7 @@ file_put_contents('/path/to/your/css/be.css', $result->getCss());
                     <div class="be-col-8">
                     </div>
                     <div class="be-col-16">
-                        <input type="button" class="be-btn be-btn-main" value="提交">
+                        <input type="button" class="be-btn be-btn-major" value="提交">
                         <input type="reset" class="be-btn" value="重置">
                     </div>
                 </div>
@@ -727,7 +741,7 @@ file_put_contents('/path/to/your/css/be.css', $result->getCss());
                     <label class="be-floating-label">描述</label>
                 </div>
 
-                <input type="button" class="be-btn be-btn-main" value="提交">
+                <input type="button" class="be-btn be-btn-major" value="提交">
                 <input type="reset" class="be-btn" value="重置">
             </form>
         </div>
@@ -786,11 +800,17 @@ file_put_contents('/path/to/your/css/be.css', $result->getCss());
                     </script>
 
                     <script>
-                        document.write('<div class="be-bc-main be-c-fff be-p-20">be-bc-main</div>');
+                        for(i = 9; i >= 1; i--) {
+                            document.write('<div class="be-bc-major'+i+' be-c-fff be-p-20">be-bc-major'+i+'</div>');
+                        }
+
+                        document.write('<div class="be-bc-major be-c-fff be-p-20">be-bc-major</div>');
 
                         for(i = 1; i <= 9; i++) {
-                            document.write('<div class="be-bc-main-'+i+' be-c-fff be-p-20">be-bc-main-'+i+'</div>');
+                            document.write('<div class="be-bc-major-'+i+' be-c-fff be-p-20">be-bc-major-'+i+'</div>');
                         }
+
+                        document.write('<div class="be-bc-minor be-c-fff be-p-20">be-bc-minor</div>');
                     </script>
 
                     <script>
@@ -821,12 +841,20 @@ file_put_contents('/path/to/your/css/be.css', $result->getCss());
                     </script>
 
                     <script>
-                        document.write('<div class="be-c-main be-p-20">be-c-main</div>');
+                        for(i = 9; i >= 1; i--) {
+                            document.write('<div class="be-c-major'+i+' be-p-20">be-c-major'+i+'</div>');
+                        }
+
+                        document.write('<div class="be-c-major be-p-20">be-c-major</div>');
 
                         for(i = 1; i <= 9; i++) {
-                            document.write('<div class="be-c-main-'+i+' be-p-20">be-c-main-'+i+'</div>');
+                            document.write('<div class="be-c-major-'+i+' be-p-20">be-c-major-'+i+'</div>');
                         }
+
+                        document.write('<div class="be-c-minor be-p-20">be-c-minor</div>');
                     </script>
+
+
 
                     <script>
                         arr = ["red","orange","yellow","green","blue","purple","pink","brown"];

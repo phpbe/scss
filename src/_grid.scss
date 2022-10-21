@@ -30,11 +30,13 @@
     @media (min-width: $min) {
 
       .be-#{$breakpoint}-col {
+        display: block;
         flex: 1 0 0 !important;
         width: auto !important;;
       }
 
       .be-#{$breakpoint}-col-auto {
+        display: block;
         flex: 0 0 auto !important;;
         width: auto !important;;
       }
