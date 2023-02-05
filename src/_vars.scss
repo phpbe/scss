@@ -42,11 +42,6 @@ $gray-colors: (
         "fff": #fff,
 ) !default;
 
-// 主色
-$majorColor: #409EFF !default;
-
-// 搭配色
-$minorColor: #333 !default;
 
 $red: #F56C6C !default;
 $orange: #f90 !default;
@@ -67,6 +62,14 @@ $colors: (
         "brown": $brown,
 ) !default;
 
+// 主色
+$majorColor: #409EFF !default;
+
+// 搭配色
+$minorColor: #333 !default;
+
+// 搭配色
+$fontColor: #333 !default;
 
 // 默认按钮样式
 $btn-color: #666 !default;
@@ -75,6 +78,7 @@ $btn-border-color: #ccc !default;
 
 
 // 理入框
+$input-background-color: #fff !default;
 $input-border-color: #ccc !default;
 $input-focus-border-color: #666 !default;
 

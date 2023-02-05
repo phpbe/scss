@@ -46,9 +46,8 @@ $majorColor-9: mix(white, $majorColor, 90%) !default;
   --color-purple: #{$purple};
   --color-pink: #{$pink};
   --color-brown: #{$brown};
+  --font-color: #{$fontColor};
 }
-
-
 
 
 *,
@@ -73,7 +72,7 @@ $majorColor-9: mix(white, $majorColor, 90%) !default;
 .be-h6 {
   margin: 0;
   font-weight: bold;
-  color: var(--minor-color);
+  color: var(--font-color);
 }
 
 .be-h1 {
