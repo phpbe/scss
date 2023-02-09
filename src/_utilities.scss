@@ -31,6 +31,22 @@
   background-color: var(--major-color);
 }
 
+.be-c-minor {
+  color: var(--minor-color);
+}
+
+.be-bc-minor {
+  background-color: var(--minor-color);
+}
+
+.be-c-font {
+  color: var(--font-color);
+}
+
+.be-bc-font {
+  background-color: var(--font-color);
+}
+
 @for $i from 1 through 9 {
   .be-c-major#{$i} {
     color: unquote("var(--major-color" + $i + ")");
@@ -47,15 +63,43 @@
   .be-bc-major-#{$i} {
     background-color: unquote("var(--major-color-" + $i + ")");
   }
+
+
+  .be-c-minor#{$i} {
+    color: unquote("var(--minor-color" + $i + ")");
+  }
+
+  .be-c-minor-#{$i} {
+    color: unquote("var(--minor-color-" + $i + ")");
+  }
+
+  .be-bc-minor#{$i} {
+    background-color: unquote("var(--minor-color" + $i + ")");
+  }
+
+  .be-bc-minor-#{$i} {
+    background-color: unquote("var(--minor-color-" + $i + ")");
+  }
+
+
+  .be-c-font#{$i} {
+    color: unquote("var(--font-color" + $i + ")");
+  }
+
+  .be-c-font-#{$i} {
+    color: unquote("var(--font-color-" + $i + ")");
+  }
+
+  .be-bc-font#{$i} {
+    background-color: unquote("var(--font-color" + $i + ")");
+  }
+
+  .be-bc-font-#{$i} {
+    background-color: unquote("var(--font-color-" + $i + ")");
+  }
+
 }
 
-.be-c-minor {
-  color: var(--minor-color);
-}
-
-.be-bc-minor {
-  background-color: var(--minor-color);
-}
 
 @each $name, $color in map-merge($gray-colors, $colors) {
   .be-c-#{$name} {

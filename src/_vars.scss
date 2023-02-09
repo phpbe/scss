@@ -72,7 +72,7 @@ $minorColor: #333 !default;
 $fontColor: #333 !default;
 
 // 默认按钮样式
-$btn-color: #666 !default;
+$btn-color: $fontColor !default;
 $btn-background-color: #fff !default;
 $btn-border-color: #ccc !default;
 

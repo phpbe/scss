@@ -17,6 +17,45 @@ $majorColor-7: mix(white, $majorColor, 70%) !default;
 $majorColor-8: mix(white, $majorColor, 80%) !default;
 $majorColor-9: mix(white, $majorColor, 90%) !default;
 
+$minorColor1: mix(black, $minorColor, 10%) !default;
+$minorColor2: mix(black, $minorColor, 20%) !default;
+$minorColor3: mix(black, $minorColor, 30%) !default;
+$minorColor4: mix(black, $minorColor, 40%) !default;
+$minorColor5: mix(black, $minorColor, 50%) !default;
+$minorColor6: mix(black, $minorColor, 60%) !default;
+$minorColor7: mix(black, $minorColor, 70%) !default;
+$minorColor8: mix(black, $minorColor, 80%) !default;
+$minorColor9: mix(black, $minorColor, 90%) !default;
+$minorColor-1: mix(white, $minorColor, 10%) !default;
+$minorColor-2: mix(white, $minorColor, 20%) !default;
+$minorColor-3: mix(white, $minorColor, 30%) !default;
+$minorColor-4: mix(white, $minorColor, 40%) !default;
+$minorColor-5: mix(white, $minorColor, 50%) !default;
+$minorColor-6: mix(white, $minorColor, 60%) !default;
+$minorColor-7: mix(white, $minorColor, 70%) !default;
+$minorColor-8: mix(white, $minorColor, 80%) !default;
+$minorColor-9: mix(white, $minorColor, 90%) !default;
+
+$fontColor1: mix(black, $fontColor, 10%) !default;
+$fontColor2: mix(black, $fontColor, 20%) !default;
+$fontColor3: mix(black, $fontColor, 30%) !default;
+$fontColor4: mix(black, $fontColor, 40%) !default;
+$fontColor5: mix(black, $fontColor, 50%) !default;
+$fontColor6: mix(black, $fontColor, 60%) !default;
+$fontColor7: mix(black, $fontColor, 70%) !default;
+$fontColor8: mix(black, $fontColor, 80%) !default;
+$fontColor9: mix(black, $fontColor, 90%) !default;
+$fontColor-1: mix(white, $fontColor, 10%) !default;
+$fontColor-2: mix(white, $fontColor, 20%) !default;
+$fontColor-3: mix(white, $fontColor, 30%) !default;
+$fontColor-4: mix(white, $fontColor, 40%) !default;
+$fontColor-5: mix(white, $fontColor, 50%) !default;
+$fontColor-6: mix(white, $fontColor, 60%) !default;
+$fontColor-7: mix(white, $fontColor, 70%) !default;
+$fontColor-8: mix(white, $fontColor, 80%) !default;
+$fontColor-9: mix(white, $fontColor, 90%) !default;
+
+
 :root {
   --major-color: #{$majorColor};
   --major-color1: #{$majorColor1};
@@ -37,7 +76,46 @@ $majorColor-9: mix(white, $majorColor, 90%) !default;
   --major-color-7: #{$majorColor-7};
   --major-color-8: #{$majorColor-8};
   --major-color-9: #{$majorColor-9};
+
   --minor-color: #{$minorColor};
+  --minor-color1: #{$minorColor1};
+  --minor-color2: #{$minorColor2};
+  --minor-color3: #{$minorColor3};
+  --minor-color4: #{$minorColor4};
+  --minor-color5: #{$minorColor5};
+  --minor-color6: #{$minorColor6};
+  --minor-color7: #{$minorColor7};
+  --minor-color8: #{$minorColor8};
+  --minor-color9: #{$minorColor9};
+  --minor-color-1: #{$minorColor-1};
+  --minor-color-2: #{$minorColor-2};
+  --minor-color-3: #{$minorColor-3};
+  --minor-color-4: #{$minorColor-4};
+  --minor-color-5: #{$minorColor-5};
+  --minor-color-6: #{$minorColor-6};
+  --minor-color-7: #{$minorColor-7};
+  --minor-color-8: #{$minorColor-8};
+  --minor-color-9: #{$minorColor-9};
+
+  --font-color: #{$fontColor};
+  --font-color1: #{$fontColor1};
+  --font-color2: #{$fontColor2};
+  --font-color3: #{$fontColor3};
+  --font-color4: #{$fontColor4};
+  --font-color5: #{$fontColor5};
+  --font-color6: #{$fontColor6};
+  --font-color7: #{$fontColor7};
+  --font-color8: #{$fontColor8};
+  --font-color9: #{$fontColor9};
+  --font-color-1: #{$fontColor-1};
+  --font-color-2: #{$fontColor-2};
+  --font-color-3: #{$fontColor-3};
+  --font-color-4: #{$fontColor-4};
+  --font-color-5: #{$fontColor-5};
+  --font-color-6: #{$fontColor-6};
+  --font-color-7: #{$fontColor-7};
+  --font-color-8: #{$fontColor-8};
+  --font-color-9: #{$fontColor-9};
   --color-red: #{$red};
   --color-orange: #{$orange};
   --color-yellow: #{$yellow};
@@ -46,7 +124,6 @@ $majorColor-9: mix(white, $majorColor, 90%) !default;
   --color-purple: #{$purple};
   --color-pink: #{$pink};
   --color-brown: #{$brown};
-  --font-color: #{$fontColor};
 }
 
 
@@ -72,7 +149,6 @@ $majorColor-9: mix(white, $majorColor, 90%) !default;
 .be-h6 {
   margin: 0;
   font-weight: bold;
-  color: var(--font-color);
 }
 
 .be-h1 {

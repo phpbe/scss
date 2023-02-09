@@ -218,8 +218,75 @@ file_put_contents('/path/to/your/css/be.css', $result->getCss());
                 document.write('<div class="be-p-50 be-ta-center">minor</div>');
                 document.write('<div class="be-b-eee be-bc-minor be-px-200 be-py-50">&nbsp;</div>');
                 document.write('</div>');
+
+                arr = ["minor-1","minor-2","minor-3","minor-4","minor-5","minor-6","minor-7","minor-8","minor-9"];
+                len = arr.length;
+                for(i = 0; i < len; i++) {
+                    document.write('<div class="be-d-inline-block">');
+                    document.write('<div class="be-p-50 be-ta-center">'+arr[i]+'</div>');
+                    document.write('<div class="be-b-eee be-bc-' + arr[i] + ' be-px-200 be-py-50">&nbsp;</div>');
+                    document.write('</div>');
+                }
             </script>
         </div>
+
+        <div class="be-mt-100">
+            <script>
+                document.write('<div class="be-d-inline-block be-mr-200">');
+                document.write('<div class="be-p-50 be-ta-center">minor</div>');
+                document.write('<div class="be-b-eee be-bc-minor be-px-200 be-py-50">&nbsp;</div>');
+                document.write('</div>');
+
+                arr = ["minor1","minor2","minor3","minor4","minor5","minor6","minor7","minor8","minor9"];
+                len = arr.length;
+                for(i = 0; i < len; i++) {
+                    document.write('<div class="be-d-inline-block">');
+                    document.write('<div class="be-p-50 be-ta-center">'+arr[i]+'</div>');
+                    document.write('<div class="be-b-eee be-bc-' + arr[i] + ' be-px-200 be-py-50">&nbsp;</div>');
+                    document.write('</div>');
+                }
+            </script>
+        </div>
+
+        <h4 class="be-h4 be-mt-200">字体颜色</h4>
+        <p class="be-mt-100 be-c-999">控制字体显示</p>
+        <div class="be-mt-100">
+            <script>
+                document.write('<div class="be-d-inline-block be-mr-200">');
+                document.write('<div class="be-p-50 be-ta-center">minor</div>');
+                document.write('<div class="be-b-eee be-bc-font be-px-200 be-py-50">&nbsp;</div>');
+                document.write('</div>');
+
+                arr = ["font-1","font-2","font-3","font-4","font-5","font-6","font-7","font-8","font-9"];
+                len = arr.length;
+                for(i = 0; i < len; i++) {
+                    document.write('<div class="be-d-inline-block">');
+                    document.write('<div class="be-p-50 be-ta-center">'+arr[i]+'</div>');
+                    document.write('<div class="be-b-eee be-bc-' + arr[i] + ' be-px-200 be-py-50">&nbsp;</div>');
+                    document.write('</div>');
+                }
+            </script>
+        </div>
+
+        <div class="be-mt-100">
+            <script>
+                document.write('<div class="be-d-inline-block be-mr-200">');
+                document.write('<div class="be-p-50 be-ta-center">font</div>');
+                document.write('<div class="be-b-eee be-bc-font be-px-200 be-py-50">&nbsp;</div>');
+                document.write('</div>');
+
+                arr = ["font1","font2","font3","font4","font5","font6","font7","font8","font9"];
+                len = arr.length;
+                for(i = 0; i < len; i++) {
+                    document.write('<div class="be-d-inline-block">');
+                    document.write('<div class="be-p-50 be-ta-center">'+arr[i]+'</div>');
+                    document.write('<div class="be-b-eee be-bc-' + arr[i] + ' be-px-200 be-py-50">&nbsp;</div>');
+                    document.write('</div>');
+                }
+            </script>
+        </div>
+
+
 
         <h4 class="be-h4 be-mt-200">输助色</h4>
         <p class="be-mt-100 be-c-999">输助色定义了常用的颜色</p>
@@ -809,8 +876,31 @@ file_put_contents('/path/to/your/css/be.css', $result->getCss());
                         for(i = 1; i <= 9; i++) {
                             document.write('<div class="be-bc-major-'+i+' be-c-fff be-p-20">be-bc-major-'+i+'</div>');
                         }
+                    </script>
+
+
+                    <script>
+                        for(i = 9; i >= 1; i--) {
+                            document.write('<div class="be-bc-minor'+i+' be-c-fff be-p-20">be-bc-minor'+i+'</div>');
+                        }
 
                         document.write('<div class="be-bc-minor be-c-fff be-p-20">be-bc-minor</div>');
+
+                        for(i = 1; i <= 9; i++) {
+                            document.write('<div class="be-bc-minor-'+i+' be-c-fff be-p-20">be-bc-minor-'+i+'</div>');
+                        }
+                    </script>
+
+                    <script>
+                        for(i = 9; i >= 1; i--) {
+                            document.write('<div class="be-bc-font'+i+' be-c-fff be-p-20">be-bc-font'+i+'</div>');
+                        }
+
+                        document.write('<div class="be-bc-font be-c-fff be-p-20">be-bc-font</div>');
+
+                        for(i = 1; i <= 9; i++) {
+                            document.write('<div class="be-bc-font-'+i+' be-c-fff be-p-20">be-bc-font-'+i+'</div>');
+                        }
                     </script>
 
                     <script>
@@ -850,10 +940,32 @@ file_put_contents('/path/to/your/css/be.css', $result->getCss());
                         for(i = 1; i <= 9; i++) {
                             document.write('<div class="be-c-major-'+i+' be-p-20">be-c-major-'+i+'</div>');
                         }
-
-                        document.write('<div class="be-c-minor be-p-20">be-c-minor</div>');
                     </script>
 
+
+                    <script>
+                        for(i = 9; i >= 1; i--) {
+                            document.write('<div class="be-c-minor'+i+' be-p-20">be-c-minor'+i+'</div>');
+                        }
+
+                        document.write('<div class="be-c-minor be-p-20">be-c-minor</div>');
+
+                        for(i = 1; i <= 9; i++) {
+                            document.write('<div class="be-c-minor-'+i+' be-p-20">be-c-minor-'+i+'</div>');
+                        }
+                    </script>
+
+                    <script>
+                        for(i = 9; i >= 1; i--) {
+                            document.write('<div class="be-c-font'+i+' be-p-20">be-c-font'+i+'</div>');
+                        }
+
+                        document.write('<div class="be-c-font be-p-20">be-c-font</div>');
+
+                        for(i = 1; i <= 9; i++) {
+                            document.write('<div class="be-c-font-'+i+' be-p-20">be-c-font-'+i+'</div>');
+                        }
+                    </script>
 
 
                     <script>
