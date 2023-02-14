@@ -838,8 +838,27 @@ file_put_contents('/path/to/your/css/be.css', $result->getCss());
         <div class="demo-box be-h6 be-mb-100">be-h6，文字大小及行高 0.8rem</div>
 
 
-        <h1 style="border-top: #eee 10px dashed;" class="be-my-400 be-pt-100">以下为CSS语法相关的样式</h1>
 
+        <h2 class="be-h2 be-pb-50 be-mt-400 be-mb-100">超链接（a）</h2>
+        <p>
+            <strong>命名规则：</strong>be-a-后缀值<br>
+            <strong>后缀值：</strong>常用颜色<br/>
+        </p>
+        <div class="demo-box be-mb-100">
+            <a class="be-link-major be-mr-100" href="#">be-link-major</a>
+            <a class="be-link-minor be-mr-100" href="#">be-link-minor</a>
+            <a class="be-link-font be-mr-100" href="#">be-link-font</a>
+            <script>
+                arr = ["red","orange","yellow","green","blue","purple","pink","brown"];
+                len = arr.length;
+                for(i = 0; i < len; i++) {
+                    document.write('<a class="be-link-'+arr[i]+' be-mr-100" href="#">be-link-'+arr[i]+'</a>');
+                }
+            </script>
+        </div>
+
+
+        <h1 style="border-top: #eee 10px dashed;" class="be-my-400 be-pt-100">以下为CSS语法相关的样式</h1>
 
 
         <h2 class="be-h2 be-pb-50 be-mt-400 be-mb-100">边框（border）</h2>

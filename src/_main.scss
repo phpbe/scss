@@ -180,3 +180,38 @@ $fontColor-9: mix(white, $fontColor, 90%) !default;
   font-size: 0.8rem;
   line-height: 0.8rem;
 }
+
+
+// ===================================================================================================================== 链接
+.be-link-major {
+  color: var(--major-color);
+}
+
+.be-link-major:hover {
+  color: var(--major-color2);
+}
+
+.be-link-minor {
+  color: var(--minor-color);
+}
+
+.be-link-minor:hover {
+  color: var(--minor-color2);
+}
+
+.be-link-font {
+  color: var(--font-color);
+}
+
+.be-link-font:hover {
+  color: var(--font-color2);
+}
+
+@each $name, $color in map-merge($gray-colors, $colors) {
+  .be-link-#{$name} {
+    color: $color;
+  }
+  .be-link-#{$name}:hover {
+    color: mix(black, $color, 20%);
+  }
+}
