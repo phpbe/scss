@@ -60,7 +60,7 @@
   width: 100%;
   font-size: 1rem;
   line-height: 1.5rem;
-  padding: .5rem .75rem;
+  padding: .375rem .75rem;
   background-clip: padding-box;
   background-color: $input-background-color;
   border: 1px solid $input-border-color;
@@ -96,7 +96,7 @@
   &::-webkit-file-upload-button {
     font-size: 1rem;
     line-height: 1.5rem;
-    padding: .5rem .75rem;
+    padding: .375rem .75rem;
     margin: -.5rem -.75rem;
     margin-inline-end: .75rem;
     pointer-events: none;
@@ -120,7 +120,7 @@
   width: 100%;
   font-size: 1rem;
   line-height: 1.5rem;
-  padding: .5rem 2.25rem .5rem .75rem;
+  padding: .375rem 2.25rem .375rem .75rem;
   background-clip: padding-box;
   background-color: #fff;
   border: 1px solid $input-border-color;
